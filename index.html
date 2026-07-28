@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WMHS · NeurIPS 2026 Workshop</title>
+    <meta
+      name="description"
+      content="World Models for High-Stakes Health: Reliable Clinical Trial Simulation and Intervention-Aware Reasoning — a NeurIPS 2026 workshop."
+    />
+    <meta property="og:title" content="WMHS · NeurIPS 2026 Workshop" />
+    <meta
+      property="og:description"
+      content="Reliable world models for clinical trial simulation: prediction, intervention, uncertainty, and reasoning in high-stakes health."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A1830'/%3E%3Cpath d='M6 22c3-8 6-12 10-12s7 4 10 12' stroke='%235A8FAF' stroke-width='2' fill='none'/%3E%3Ccircle cx='16' cy='10' r='2' fill='%23C9853F'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grid-veil"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="WMHS @ NeurIPS 2026 home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">WMHS @ NeurIPS 2026</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#dates">Dates</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#cfp">Call for Papers</a>
+      </nav>
+      <a class="btn btn-small" href="#cfp">Submit</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#dates">Dates</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#panel">Panel</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#organizers">Organizers</a>
+      <a href="#pc">Program Committee</a>
+      <a href="#cfp">Call for Papers</a>
+    </div>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">NeurIPS 2026 Workshop · Atlanta</p>
+          <h1 class="brand-hero reveal delay-1">WMHS</h1>
+          <p class="hero-title reveal delay-2">
+            World Models for High-Stakes Health
+          </p>
+          <p class="hero-lede reveal delay-3">
+            Reliable clinical trial simulation and intervention-aware reasoning. Patient world models that move beyond prediction toward calibrated,
+            clinically meaningful evidence.
+          </p>
+          <div class="hero-actions reveal delay-4">
+            <a class="btn" href="#cfp">Call for Papers</a>
+            <a class="btn btn-ghost" href="#schedule">View Schedule</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal delay-2" aria-hidden="true">
+          <svg
+            class="trajectory-art"
+            viewBox="0 0 640 520"
+            role="img"
+            aria-label="Abstract patient trajectories and modelled interventions"
+          >
+            <defs>
+              <linearGradient id="washA" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3D8FBF" stop-opacity="0.14" />
+                <stop offset="100%" stop-color="#3D8FBF" stop-opacity="0.02" />
+              </linearGradient>
+              <linearGradient id="washB" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#C9853F" stop-opacity="0.12" />
+                <stop offset="100%" stop-color="#C9853F" stop-opacity="0.02" />
+              </linearGradient>
+              <linearGradient id="washC" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2A9B8F" stop-opacity="0.12" />
+                <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0.02" />
+              </linearGradient>
+              <linearGradient id="panelFade" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#F4F7FA" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#D5DEE8" stop-opacity="0.55" />
+              </linearGradient>
+            </defs>
+            <rect x="24" y="24" width="592" height="472" rx="28" fill="url(#panelFade)" />
+            <g class="gridlines">
+              <path d="M64 120 H576 M64 180 H576 M64 240 H576 M64 300 H576 M64 360 H576 M64 420 H576" />
+              <path d="M120 80 V460 M200 80 V460 M280 80 V460 M360 80 V460 M440 80 V460 M520 80 V460" />
+            </g>
+            <!-- Soft colour fields -->
+            <ellipse class="wash wash-a" cx="220" cy="240" rx="150" ry="110" fill="url(#washA)" />
+            <ellipse class="wash wash-b" cx="420" cy="200" rx="130" ry="100" fill="url(#washB)" />
+            <ellipse class="wash wash-c" cx="380" cy="340" rx="140" ry="90" fill="url(#washC)" />
+            <!-- Abstract patient / intervention trajectories -->
+            <path
+              class="trail trail-a"
+              d="M90 300 C160 280, 200 200, 280 190 S400 230, 470 170 S540 90, 580 110"
+              fill="none"
+              stroke="#2F6F9A"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-b"
+              d="M90 250 C170 240, 230 300, 310 290 S420 220, 500 260 S560 320, 590 300"
+              fill="none"
+              stroke="#C9853F"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-c"
+              d="M90 360 C180 340, 240 380, 330 350 S450 280, 530 320 S570 380, 600 360"
+              fill="none"
+              stroke="#2A9B8F"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-d"
+              d="M90 200 C150 160, 220 140, 300 170 S390 260, 470 240 S540 180, 590 200"
+              fill="none"
+              stroke="#5B6B9A"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-e"
+              d="M200 310 C280 250, 340 210, 420 200 S510 230, 580 250"
+              fill="none"
+              stroke="#D4A017"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-f"
+              d="M180 220 C260 280, 320 340, 410 360 S520 340, 580 380"
+              fill="none"
+              stroke="#B85C38"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-g"
+              d="M140 280 C220 200, 300 150, 390 160 S500 210, 560 160"
+              fill="none"
+              stroke="#4A8FA8"
+              stroke-linecap="round"
+            />
+            <g class="nodes">
+              <circle class="node n1" cx="90" cy="300" r="6" />
+              <circle class="node n2" cx="90" cy="250" r="5" />
+              <circle class="node n3" cx="280" cy="190" r="4.5" />
+              <circle class="node n4" cx="310" cy="290" r="5" />
+              <circle class="node n5" cx="420" cy="200" r="5.5" />
+              <circle class="node n6" cx="470" cy="240" r="4" />
+              <circle class="node n7" cx="530" cy="320" r="5" />
+              <circle class="node n8" cx="580" cy="250" r="6" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="org-strip reveal delay-4">
+          <p class="org-strip-label">Organised by researchers from</p>
+          <ul class="org-logos" aria-label="Organising institutions">
+            <li>
+              <img class="org-logo" src="assets/logos/utoronto.png" alt="University of Toronto" />
+            </li>
+            <li>
+              <img class="org-logo org-logo-vector" src="assets/logos/vector.png" alt="Vector Institute" />
+            </li>
+            <li>
+              <img class="org-logo" src="assets/logos/iqvia.svg" alt="IQVIA" />
+            </li>
+            <li>
+              <img class="org-logo org-logo-nvidia" src="assets/logos/nvidia.svg" alt="NVIDIA" />
+            </li>
+            <li>
+              <img class="org-logo" src="assets/logos/gsk.png" alt="GSK" />
+            </li>
+            <li>
+              <img class="org-logo org-logo-crest" src="assets/logos/columbia.svg" alt="Columbia University" />
+            </li>
+            <li>
+              <img class="org-logo org-logo-crest" src="assets/logos/oxford.svg" alt="University of Oxford" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="central-q-band">
+        <p class="central-q-label">Central question</p>
+        <p class="central-q">
+          What would it take to build reliable
+          <strong class="term nowrap">patient world models</strong>
+          that can
+          <strong class="term">simulate clinical trajectories</strong>,
+          reason about
+          <strong class="term">interventions</strong>,
+          quantify
+          <strong class="term">uncertainty</strong>,
+          and
+          <strong class="term">generate evidence</strong>
+          credible enough to inform clinical trial design, execution, and
+          translation into care?
+        </p>
+      </div>
+
+      <section class="section about" id="about">
+        <div class="section-head">
+          <p class="eyebrow">Overview</p>
+          <h2>Clinical trial simulation as a stress test for world models</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-main">
+            <p>
+              Clinical trial simulation is a uniquely demanding and falsifiable testbed for one of
+              the central open problems in machine learning: building reliable world models of
+              complex, partially observed, intervention-rich systems.
+            </p>
+            <p>
+              This workshop focuses on <strong class="term">patient world models</strong> — generative and
+              reasoning-capable systems that learn from patient trajectories, trial protocols,
+              interventions, mechanisms of action, and real-world evidence to support clinical trial
+              simulation and decision-making.
+            </p>
+          </div>
+          <div class="about-visual" aria-hidden="true">
+            <svg class="about-art" viewBox="0 0 420 220" role="img">
+              <defs>
+                <linearGradient id="aboutFlow" x1="0%" y1="50%" x2="100%" y2="50%">
+                  <stop offset="0%" stop-color="#2F6F9A" stop-opacity="0.15" />
+                  <stop offset="50%" stop-color="#C9853F" stop-opacity="0.22" />
+                  <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0.15" />
+                </linearGradient>
+              </defs>
+              <rect width="420" height="220" rx="18" fill="#e8eef4" />
+              <g stroke="#ffffff" stroke-width="1.5" fill="none">
+                <path d="M28 52 H392 M28 96 H392 M28 140 H392 M28 184 H392" />
+                <path d="M72 28 V192 M140 28 V192 M208 28 V192 M276 28 V192 M344 28 V192" />
+              </g>
+              <!-- Twin worlds: factual vs intervened -->
+              <rect x="36" y="40" width="160" height="140" rx="16" fill="url(#aboutFlow)" opacity="0.55" />
+              <rect x="224" y="40" width="160" height="140" rx="16" fill="url(#aboutFlow)" opacity="0.85" />
+              <!-- Factual chain (left) -->
+              <g fill="none" stroke-linecap="round">
+                <path d="M70 150 C95 120, 110 90, 140 78" stroke="#5B6B9A" stroke-width="2" />
+                <path d="M140 78 C155 100, 160 125, 155 155" stroke="#2F6F9A" stroke-width="2.1" />
+                <path d="M70 150 C100 155, 130 158, 155 155" stroke="#2A9B8F" stroke-width="1.7" opacity="0.8" />
+              </g>
+              <circle cx="70" cy="150" r="8" fill="#5B6B9A" />
+              <circle cx="140" cy="78" r="9" fill="#2F6F9A" />
+              <circle cx="155" cy="155" r="8" fill="#2A9B8F" />
+              <!-- Bridge / intervention shift -->
+              <path d="M196 110 H228" stroke="#C9853F" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 5" />
+              <circle cx="212" cy="110" r="7" fill="#C9853F" />
+              <g stroke="#C9853F" stroke-width="2" stroke-linecap="round">
+                <line x1="204" y1="102" x2="220" y2="118" />
+                <line x1="220" y1="102" x2="204" y2="118" />
+              </g>
+              <!-- Intervened twin (right): same skeleton, remapped path -->
+              <g fill="none" stroke-linecap="round">
+                <path d="M258 150 C275 140, 285 95, 310 78" stroke="#5B6B9A" stroke-width="1.5" opacity="0.35" stroke-dasharray="4 6" />
+                <path d="M258 150 C290 100, 320 85, 350 88" stroke="#C9853F" stroke-width="2.4" />
+                <path d="M350 88 C360 115, 355 140, 345 155" stroke="#2A9B8F" stroke-width="2.1" />
+                <path d="M258 150 C290 160, 320 162, 345 155" stroke="#D4A017" stroke-width="1.6" opacity="0.85" />
+              </g>
+              <circle cx="258" cy="150" r="8" fill="#5B6B9A" />
+              <circle cx="350" cy="88" r="11" fill="#C9853F" />
+              <circle cx="345" cy="155" r="8" fill="#2A9B8F" />
+            </svg>
+          </div>
+          <aside class="about-aside">
+            <h3>Why now</h3>
+            <p>
+              Foundation models, sequence models, and generative simulators are converging with
+              healthcare AI’s shift from static risk prediction toward longitudinal modelling,
+              treatment response estimation, and real-world evidence — yet reliability in
+              high-stakes medical settings remains unresolved.
+            </p>
+            <h3>Who should attend</h3>
+            <p>
+              Researchers and practitioners across machine learning, healthcare AI, causal inference,
+              biostatistics, clinical development, epidemiology, AI for science, uncertainty and
+              trustworthy ML, reasoning systems, digital health, pharma / biotech, real-world evidence,
+              regulatory science, and translational medicine — including academia, industry, clinical
+              research organizations, and interdisciplinary teams.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section topics" id="topics">
+        <div class="section-head">
+          <p class="eyebrow">Topics of Interest</p>
+          <h2>Where simulation, causality, and clinical evidence meet</h2>
+          <p class="section-lede">
+            We invite work that advances reliable, intervention-aware patient world models —
+            including benchmarks, negative results, position papers, and emerging directions.
+          </p>
+        </div>
+        <ul class="topic-list">
+          <li>Patient world models using longitudinal, multimodal clinical data</li>
+          <li>Clinical trial simulation, virtual trial arms, synthetic controls, and external control cohorts</li>
+          <li>Counterfactual outcome prediction, treatment effect modelling, and target trial emulation</li>
+          <li>Foundation models for EHR, clinical trials, real-world evidence, and patient timelines</li>
+          <li>Representation of interventions, treatment regimes, endpoints, eligibility criteria, pathways, and mechanisms of action</li>
+          <li>Causal representation learning, causal inference, and off-policy evaluation for intervention-aware simulation</li>
+          <li>Uncertainty quantification, calibration, abstention, ambiguity, and selective prediction</li>
+          <li>Temporal reasoning, logical consistency, clinical plausibility, and protocol-aware reasoning</li>
+          <li>Agentic systems for trial design, protocol interpretation, evidence synthesis, and clinical research workflows</li>
+          <li>Benchmarking, robustness, and validation against real-world evidence, historical trials, clinical knowledge, and downstream clinical utility</li>
+        </ul>
+      </section>
+
+      <section class="section dates" id="dates">
+        <div class="section-head">
+          <p class="eyebrow">Important Dates</p>
+          <h2>Submission timeline</h2>
+          <p class="section-lede">All deadlines are Anywhere on Earth (AoE).</p>
+        </div>
+        <ol class="date-rail">
+          <li>
+            <time datetime="2026-08-29">Aug 29, 2026</time>
+            <span>Paper submission deadline</span>
+          </li>
+          <li>
+            <time datetime="2026-09">September 2026</time>
+            <span>Review period</span>
+          </li>
+          <li>
+            <time datetime="2026-09-29">Sep 29, 2026</time>
+            <span>Author notification</span>
+          </li>
+          <li>
+            <time datetime="2026-12">December 2026</time>
+            <span>Workshop at NeurIPS 2026 · Atlanta</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section speakers" id="speakers">
+        <div class="section-head">
+          <p class="eyebrow">Invited Speakers</p>
+          <h2>Voices across world models, causality, and clinical AI</h2>
+          <p class="section-lede">
+            Final speaker allocation will depend on confirmed in-person availability in Atlanta,
+            preserving coverage across the workshop themes.
+          </p>
+        </div>
+        <div class="people-grid speakers-grid">
+          <article class="person">
+            <div class="avatar" aria-hidden="true">NK</div>
+            <h3>Nathan Kallus</h3>
+            <p class="role">Assistant Professor of Medical AI</p>
+            <p class="affil">Cornell University</p>
+            <p class="topic">Causal trial simulation</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">CT</div>
+            <h3>Chris Tomlinson</h3>
+            <p class="role">Senior Fellow in Clinical Foundation Models</p>
+            <p class="affil">UCL / NHS Foresight</p>
+            <p class="topic">EHR world models</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">?</div>
+            <h3>TBC</h3>
+            <p class="role">Speaker to be confirmed</p>
+            <p class="affil">GSK</p>
+            <p class="topic">Pharma AI / evidence generation</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">?</div>
+            <h3>TBC</h3>
+            <p class="role">Speaker to be confirmed</p>
+            <p class="affil">TBC</p>
+            <p class="topic">Patient world models</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">?</div>
+            <h3>TBC</h3>
+            <p class="role">Speaker to be confirmed</p>
+            <p class="affil">TBC</p>
+            <p class="topic">Real-world validation</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">?</div>
+            <h3>TBC</h3>
+            <p class="role">Speaker to be confirmed</p>
+            <p class="affil">TBC</p>
+            <p class="topic">Medical foundation models</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section panel" id="panel">
+        <div class="section-head">
+          <p class="eyebrow">Closing Panel</p>
+          <h2>What would make world models trustworthy enough for clinical trial simulation?</h2>
+          <p class="section-lede">
+            A synthesis of technical and translational themes — reliability standards, data access,
+            benchmarks, and responsible use in high-stakes health.
+          </p>
+        </div>
+        <div class="panel-layout">
+          <article class="person moderator">
+            <p class="badge">Moderator</p>
+            <div class="avatar" aria-hidden="true">RS</div>
+            <h3>Raja Shankar</h3>
+            <p class="role">VP Machine Learning</p>
+            <p class="affil">IQVIA</p>
+            <p class="topic">Trial simulation / deployment</p>
+          </article>
+          <div class="people-grid panel-grid">
+            <article class="person">
+              <div class="avatar" aria-hidden="true">SB</div>
+              <h3>Sandeep Burugupalli</h3>
+              <p class="role">Head of Data Science</p>
+              <p class="affil">AstraZeneca</p>
+              <p class="topic">Pharma / trials</p>
+            </article>
+            <article class="person">
+              <div class="avatar" aria-hidden="true">RY</div>
+              <h3>Rose Yu</h3>
+              <p class="role">Assistant Professor of Computer Science</p>
+              <p class="affil">UC San Diego</p>
+              <p class="topic">Time-series / world models</p>
+            </article>
+            <article class="person">
+              <div class="avatar" aria-hidden="true">?</div>
+              <h3>TBC</h3>
+              <p class="role">Panelist to be confirmed</p>
+              <p class="affil">TBC</p>
+              <p class="topic">Trustworthy clinical AI</p>
+            </article>
+            <article class="person">
+              <div class="avatar" aria-hidden="true">?</div>
+              <h3>TBC</h3>
+              <p class="role">Panelist to be confirmed</p>
+              <p class="affil">TBC</p>
+              <p class="topic">Uncertainty / calibration</p>
+            </article>
+            <article class="person">
+              <div class="avatar" aria-hidden="true">?</div>
+              <h3>TBC</h3>
+              <p class="role">Panelist to be confirmed</p>
+              <p class="affil">TBC</p>
+              <p class="topic">AI drug discovery</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section schedule" id="schedule">
+        <div class="section-head">
+          <p class="eyebrow">Program</p>
+          <h2>Proposed workshop schedule</h2>
+          <p class="section-lede">
+            A full-day program balancing invited talks, contributed orals, posters, structured
+            discussion, and a closing panel.
+          </p>
+        </div>
+        <div class="schedule-table" role="table" aria-label="Workshop schedule">
+          <div class="sched-row" role="row">
+            <time>09:00 – 09:10</time>
+            <div>
+              <h3>Opening Remarks</h3>
+              <p>Motivation and overview.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>09:10 – 09:45</time>
+            <div>
+              <h3>Invited Talk 1: Patient World Models and Causal Digital Twins</h3>
+              <p>Speaker to be confirmed.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>09:45 – 10:20</time>
+            <div>
+              <h3>Invited Talk 2: Causal Inference and Intervention-Aware Trial Simulation</h3>
+              <p>Proposed speaker: Nathan Kallus.</p>
+            </div>
+          </div>
+          <div class="sched-row break" role="row">
+            <time>10:20 – 10:45</time>
+            <div>
+              <h3>Coffee Break</h3>
+              <p>Informal discussion and networking.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>10:45 – 11:45</time>
+            <div>
+              <h3>Contributed Oral Session 1: Patient World Models and Trial Simulation</h3>
+              <p>Patient world models, virtual trial arms, synthetic controls, EHR foundation models, and trajectory generation.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>11:45 – 12:20</time>
+            <div>
+              <h3>Invited Talk 3: Medical Foundation Models and Patient Trajectories</h3>
+              <p>Speaker to be confirmed.</p>
+            </div>
+          </div>
+          <div class="sched-row break" role="row">
+            <time>12:20 – 13:20</time>
+            <div>
+              <h3>Lunch Break</h3>
+              <p>Informal networking.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>13:20 – 13:55</time>
+            <div>
+              <h3>Invited Talk 4: Real-World Evidence, Validation, and Deployment Reliability</h3>
+              <p>Speaker to be confirmed.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>13:55 – 14:55</time>
+            <div>
+              <h3>Poster Session</h3>
+              <p>Accepted papers; interaction across ML, clinical research, causal inference, and industry.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>14:55 – 15:20</time>
+            <div>
+              <h3>Structured Discussion: What Counts as Validation for a Patient World Model?</h3>
+              <p>Jay Nanavati moderates: validation, historical trial emulation, synthetic controls, uncertainty, causal validity, and clinical utility.</p>
+            </div>
+          </div>
+          <div class="sched-row break" role="row">
+            <time>15:20 – 15:45</time>
+            <div>
+              <h3>Coffee Break</h3>
+              <p>Informal discussion and networking.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>15:45 – 16:45</time>
+            <div>
+              <h3>Contributed Oral Session 2: Reasoning, Evaluation, and Agentic Systems</h3>
+              <p>Reasoning, protocol interpretation, benchmark design, evaluation, and agentic trial-design systems.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>16:45 – 17:20</time>
+            <div>
+              <h3>Invited Talk 5: Pharma AI, Clinical Development, and Evidence Generation</h3>
+              <p>Speaker TBC (GSK).</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>17:20 – 17:55</time>
+            <div>
+              <h3>Panel Discussion</h3>
+              <p>Raja Shankar moderates: trustworthiness, reliability standards, data access, benchmarks, and responsible use.</p>
+            </div>
+          </div>
+          <div class="sched-row" role="row">
+            <time>17:55 – 18:00</time>
+            <div>
+              <h3>Closing Remarks and Roadmap</h3>
+              <p>Roadmap, open problems, and post-workshop report.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section organizers" id="organizers">
+        <div class="section-head">
+          <p class="eyebrow">Organizing Committee</p>
+          <h2>Academia, industry, and clinical AI leadership</h2>
+        </div>
+        <div class="people-grid organizers-grid">
+          <article class="person">
+            <div class="avatar" aria-hidden="true">JN</div>
+            <h3>Jay Nanavati</h3>
+            <p class="role">Head of Advanced AI</p>
+            <p class="affil">IQVIA</p>
+            <a class="email" href="mailto:jay.nanavati@iqvia.com">jay.nanavati@iqvia.com</a>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">RK</div>
+            <h3>Rahul G. Krishnan</h3>
+            <p class="role">Assistant Professor, CS &amp; Laboratory Medicine &amp; Pathobiology</p>
+            <p class="affil">University of Toronto / Vector Institute</p>
+            <a class="email" href="mailto:rahulgk@cs.toronto.edu">rahulgk@cs.toronto.edu</a>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">SJ</div>
+            <h3>Shalmali Joshi</h3>
+            <p class="role">Assistant Professor of Biomedical Informatics</p>
+            <p class="affil">Columbia University</p>
+            <a class="email" href="mailto:shalmali.joshi@columbia.edu">shalmali.joshi@columbia.edu</a>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">LL</div>
+            <h3>Lin Li</h3>
+            <p class="role">Research Associate (PostDoc)</p>
+            <p class="affil">University of Oxford</p>
+            <a class="email" href="mailto:lin.li@cs.ox.ac.uk">lin.li@cs.ox.ac.uk</a>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">KL</div>
+            <h3>Katie Link</h3>
+            <p class="role">Digital Health Applied Research</p>
+            <p class="affil">NVIDIA</p>
+            <a class="email" href="mailto:klink@nvidia.com">klink@nvidia.com</a>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">ES</div>
+            <h3>Emma Slade</h3>
+            <p class="role">Senior Director of AI/ML</p>
+            <p class="affil">GSK</p>
+            <a class="email" href="mailto:emma.x.slade@gsk.com">emma.x.slade@gsk.com</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section pc" id="pc">
+        <div class="section-head">
+          <p class="eyebrow">Program Committee</p>
+          <h2>Confirmed reviewers across clinical ML, pharma, and infrastructure</h2>
+        </div>
+        <div class="pc-groups">
+          <div class="pc-group">
+            <h3>Clinical ML / Trustworthy Healthcare AI</h3>
+            <p>Hunter Fanous — Stanford; Shlok Natarajan — Stanford; Sonnet H Xu — Stanford; Vicky Bikia — Stanford; Vaibhava Lakshmi Ravideshik — MIT; Mark van der Laan — UC Berkeley; Irene Li — University of Tokyo</p>
+          </div>
+          <div class="pc-group">
+            <h3>Patient Trajectories / EHR Foundation Models</h3>
+            <p>Zeljko Kraljevic — King’s College London / NHS Foresight; Simon Ellershaw — King’s College London; Aysin Tumay — UCSD</p>
+          </div>
+          <div class="pc-group">
+            <h3>Biomedical / Clinical AI</h3>
+            <p>Michael Abaho — University of Liverpool; Efthyvoulos Drousiotis — University of Liverpool; Daniel Joyce — University of Liverpool; Naomi Danielle Torrisi — Cancer Research UK; Ali Rizwan — University of Glasgow; Valentin Romanov — Imperial College London</p>
+          </div>
+          <div class="pc-group">
+            <h3>Pharma / RWE / Clinical Development</h3>
+            <p>Andrew Buchanan — AstraZeneca; Francesco Ronzano — AstraZeneca; Arijit Patra — UCB; Ehsan Hajiramezanali — Genentech; Yichen Zhou — GSK; Will Bhot — GSK; Behzad Karkaria — GSK; Nimrod Dorfman — GSK</p>
+          </div>
+          <div class="pc-group">
+            <h3>AI Infrastructure / Industry Research</h3>
+            <p>Anusua Trivedi — Oracle Health; Erik Miehling — IBM Research; Zili Zhou — Apple Twin Lab; Xin Yu — NVIDIA; Reza Negahdar — NVIDIA; Raghav Mani — NVIDIA; David Nola — NVIDIA</p>
+          </div>
+          <div class="pc-group">
+            <h3>Applied AI and RWE</h3>
+            <p>Mourad Gridach — IQVIA; Federico Pittino — IQVIA; Arpit Rajauria — IQVIA; Meghdad Kurmanji — IQVIA; Brett Harder — IQVIA</p>
+          </div>
+          <div class="pc-group">
+            <h3>Reasoning / Validation / Knowledge Representation</h3>
+            <p>Kevin Roitero — University of Udine; Vincenzo Della Mea — University of Udine; Mihai Horia Popescu — University of Udine; Riccardo Lunardi — University of Udine</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cfp" id="cfp">
+        <div class="section-head">
+          <p class="eyebrow">Call for Papers</p>
+          <h2>Submit your work</h2>
+          <p class="section-lede">
+            We solicit non-archival submissions, including work in progress, benchmarks, negative
+            results, position papers, and emerging directions. Submissions of work already published
+            at major ML venues or presented in the main NeurIPS program are discouraged.
+          </p>
+        </div>
+        <div class="cfp-grid">
+          <div class="cfp-block cfp-cta">
+            <h3>OpenReview</h3>
+            <p>
+              The submission portal will open closer to the deadline. Check back here or follow
+              announcements from the organizers.
+            </p>
+            <a class="btn" href="mailto:jay.nanavati@iqvia.com?subject=WMHS%20NeurIPS%202026%20Inquiry">Contact organizers</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problems" id="problems">
+        <div class="section-head">
+          <p class="eyebrow">Open Problems</p>
+          <h2>What the workshop aims to advance</h2>
+        </div>
+        <div class="problem-grid">
+          <article>
+            <h3>Representation &amp; simulation</h3>
+            <p>
+              Represent patient histories as temporal clinical states; move from observed-care
+              prediction to intervention simulation; incorporate mechanisms of action, biomarkers,
+              and patient heterogeneity.
+            </p>
+          </article>
+          <article>
+            <h3>Uncertainty &amp; reliability</h3>
+            <p>
+              Quantify uncertainty, ambiguity, shift, and abstention when confident errors are
+              dangerous — and define reliability standards for when simulations can inform trial
+              design or evidence generation.
+            </p>
+          </article>
+          <article>
+            <h3>Validation &amp; deployment</h3>
+            <p>
+              Evaluate often-unobserved counterfactuals through historical trial emulation, synthetic
+              controls, negative controls, subgroup calibration, benchmarks, and prospective
+              protocols.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <strong>WMHS @ NeurIPS 2026</strong>
+          <p>NeurIPS 2026 Workshop · Atlanta</p>
+        </div>
+      </div>
+      <p class="tagline">
+        Reliable world models for clinical trial simulation: prediction, intervention, uncertainty,
+        and reasoning in high-stakes health.
+      </p>
+      <p class="footer-meta">
+        Atlanta · Contact
+        <a href="mailto:jay.nanavati@iqvia.com">jay.nanavati@iqvia.com</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
