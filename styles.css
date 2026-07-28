@@ -885,7 +885,6 @@ main {
   display: grid;
   gap: 0;
   border-top: 1px solid var(--line);
-  text-align: center;
 }
 
 .sched-row {
@@ -893,11 +892,6 @@ main {
   gap: 0.35rem;
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--line);
-  justify-items: center;
-}
-
-.schedule .sched-row {
-  text-align: center;
 }
 
 .sched-row time {
@@ -1095,12 +1089,6 @@ main {
     grid-template-columns: 9.5rem 1fr;
     gap: 1.5rem;
     align-items: start;
-  }
-
-  .schedule .sched-row {
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
-    justify-items: center;
   }
 
   .cfp-grid {
