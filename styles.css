@@ -592,6 +592,7 @@ main {
 
 .schedule + .organizers {
   padding-top: clamp(1.5rem, 3vh, 2.25rem);
+  border-top: 0;
 }
 
 .section-head {
