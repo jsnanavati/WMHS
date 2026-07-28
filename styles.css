@@ -806,6 +806,15 @@ main {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
+.avatar-photo {
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
 .person h3 {
   font-size: 1.45rem;
   margin-bottom: 0.2rem;
