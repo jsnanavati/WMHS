@@ -786,6 +786,11 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.speakers .person,
+.organizers .person {
+  text-align: center;
+}
+
 .avatar {
   width: 4.25rem;
   height: 4.25rem;
@@ -804,6 +809,12 @@ main {
     linear-gradient(145deg, rgba(90, 143, 175, 0.22), rgba(10, 24, 48, 0.08));
   border: 1px solid rgba(12, 25, 41, 0.1);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.speakers .avatar,
+.organizers .avatar {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .avatar-photo {
@@ -874,6 +885,7 @@ main {
   display: grid;
   gap: 0;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .sched-row {
@@ -881,6 +893,11 @@ main {
   gap: 0.35rem;
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--line);
+  justify-items: center;
+}
+
+.schedule .sched-row {
+  text-align: center;
 }
 
 .sched-row time {
@@ -1078,6 +1095,12 @@ main {
     grid-template-columns: 9.5rem 1fr;
     gap: 1.5rem;
     align-items: start;
+  }
+
+  .schedule .sched-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    justify-items: center;
   }
 
   .cfp-grid {
