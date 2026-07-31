@@ -63,6 +63,88 @@
 
     <main>
       <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <svg
+            class="trajectory-bg"
+            viewBox="0 0 1440 420"
+            preserveAspectRatio="xMidYMax slice"
+            focusable="false"
+          >
+            <defs>
+              <linearGradient id="curveFade" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#0A1830" stop-opacity="0" />
+                <stop offset="55%" stop-color="#0A1830" stop-opacity="0.03" />
+                <stop offset="100%" stop-color="#0A1830" stop-opacity="0.08" />
+              </linearGradient>
+              <linearGradient id="washA" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3D8FBF" stop-opacity="0.18" />
+                <stop offset="100%" stop-color="#3D8FBF" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="washB" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#C9853F" stop-opacity="0.16" />
+                <stop offset="100%" stop-color="#C9853F" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="washC" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2A9B8F" stop-opacity="0.14" />
+                <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <rect width="1440" height="420" fill="url(#curveFade)" />
+            <ellipse class="wash wash-a" cx="360" cy="280" rx="320" ry="120" fill="url(#washA)" />
+            <ellipse class="wash wash-b" cx="980" cy="250" rx="300" ry="110" fill="url(#washB)" />
+            <ellipse class="wash wash-c" cx="720" cy="340" rx="380" ry="100" fill="url(#washC)" />
+            <path
+              class="trail trail-a"
+              d="M-40 260 C120 220, 220 300, 380 250 S620 160, 780 210 S1040 300, 1200 230 S1360 180, 1480 210"
+              fill="none"
+              stroke="#2F6F9A"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-b"
+              d="M-40 300 C140 270, 260 340, 420 310 S700 220, 860 270 S1100 340, 1280 290 S1400 250, 1480 280"
+              fill="none"
+              stroke="#C9853F"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-c"
+              d="M-40 340 C160 320, 280 380, 460 350 S740 280, 920 330 S1160 390, 1340 350 S1420 320, 1480 340"
+              fill="none"
+              stroke="#2A9B8F"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-d"
+              d="M-40 220 C180 180, 320 240, 500 200 S780 140, 960 190 S1180 250, 1360 180 S1440 160, 1480 175"
+              fill="none"
+              stroke="#5B6B9A"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-e"
+              d="M80 310 C260 250, 420 210, 620 230 S920 300, 1120 260 S1320 220, 1480 245"
+              fill="none"
+              stroke="#D4A017"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-f"
+              d="M40 280 C220 340, 400 380, 620 360 S960 300, 1180 340 S1360 380, 1480 365"
+              fill="none"
+              stroke="#B85C38"
+              stroke-linecap="round"
+            />
+            <path
+              class="trail trail-g"
+              d="M20 240 C200 200, 380 160, 580 175 S900 240, 1120 200 S1320 150, 1480 165"
+              fill="none"
+              stroke="#4A8FA8"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
         <div class="hero-copy">
           <p class="eyebrow reveal">The First Workshop on</p>
           <h1 class="brand-hero reveal delay-1">World Models for High-Stakes Health</h1>
@@ -78,102 +160,6 @@
             <a class="btn" href="#cfp">Call for Papers</a>
             <a class="btn btn-ghost" href="#schedule">View Schedule</a>
           </div>
-        </div>
-        <div class="hero-visual reveal delay-2" aria-hidden="true">
-          <svg
-            class="trajectory-art"
-            viewBox="0 0 640 520"
-            role="img"
-            aria-label="Abstract patient trajectories and modelled interventions"
-          >
-            <defs>
-              <linearGradient id="washA" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#3D8FBF" stop-opacity="0.14" />
-                <stop offset="100%" stop-color="#3D8FBF" stop-opacity="0.02" />
-              </linearGradient>
-              <linearGradient id="washB" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#C9853F" stop-opacity="0.12" />
-                <stop offset="100%" stop-color="#C9853F" stop-opacity="0.02" />
-              </linearGradient>
-              <linearGradient id="washC" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#2A9B8F" stop-opacity="0.12" />
-                <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0.02" />
-              </linearGradient>
-              <linearGradient id="panelFade" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#F4F7FA" stop-opacity="0.35" />
-                <stop offset="100%" stop-color="#D5DEE8" stop-opacity="0.55" />
-              </linearGradient>
-            </defs>
-            <rect x="24" y="24" width="592" height="472" rx="28" fill="url(#panelFade)" />
-            <g class="gridlines">
-              <path d="M64 120 H576 M64 180 H576 M64 240 H576 M64 300 H576 M64 360 H576 M64 420 H576" />
-              <path d="M120 80 V460 M200 80 V460 M280 80 V460 M360 80 V460 M440 80 V460 M520 80 V460" />
-            </g>
-            <!-- Soft colour fields -->
-            <ellipse class="wash wash-a" cx="220" cy="240" rx="150" ry="110" fill="url(#washA)" />
-            <ellipse class="wash wash-b" cx="420" cy="200" rx="130" ry="100" fill="url(#washB)" />
-            <ellipse class="wash wash-c" cx="380" cy="340" rx="140" ry="90" fill="url(#washC)" />
-            <!-- Abstract patient / intervention trajectories -->
-            <path
-              class="trail trail-a"
-              d="M90 300 C160 280, 200 200, 280 190 S400 230, 470 170 S540 90, 580 110"
-              fill="none"
-              stroke="#2F6F9A"
-              stroke-linecap="round"
-            />
-            <path
-              class="trail trail-b"
-              d="M90 250 C170 240, 230 300, 310 290 S420 220, 500 260 S560 320, 590 300"
-              fill="none"
-              stroke="#C9853F"
-              stroke-linecap="round"
-            />
-            <path
-              class="trail trail-c"
-              d="M90 360 C180 340, 240 380, 330 350 S450 280, 530 320 S570 380, 600 360"
-              fill="none"
-              stroke="#2A9B8F"
-              stroke-linecap="round"
-            />
-            <path
-              class="trail trail-d"
-              d="M90 200 C150 160, 220 140, 300 170 S390 260, 470 240 S540 180, 590 200"
-              fill="none"
-              stroke="#5B6B9A"
-              stroke-linecap="round"
-            />
-            <path
-              class="trail trail-e"
-              d="M200 310 C280 250, 340 210, 420 200 S510 230, 580 250"
-              fill="none"
-              stroke="#D4A017"
-              stroke-linecap="round"
-            />
-            <path
-              class="trail trail-f"
-              d="M180 220 C260 280, 320 340, 410 360 S520 340, 580 380"
-              fill="none"
-              stroke="#B85C38"
-              stroke-linecap="round"
-            />
-            <path
-              class="trail trail-g"
-              d="M140 280 C220 200, 300 150, 390 160 S500 210, 560 160"
-              fill="none"
-              stroke="#4A8FA8"
-              stroke-linecap="round"
-            />
-            <g class="nodes">
-              <circle class="node n1" cx="90" cy="300" r="6" />
-              <circle class="node n2" cx="90" cy="250" r="5" />
-              <circle class="node n3" cx="280" cy="190" r="4.5" />
-              <circle class="node n4" cx="310" cy="290" r="5" />
-              <circle class="node n5" cx="420" cy="200" r="5.5" />
-              <circle class="node n6" cx="470" cy="240" r="4" />
-              <circle class="node n7" cx="530" cy="320" r="5" />
-              <circle class="node n8" cx="580" cy="250" r="6" />
-            </g>
-          </svg>
         </div>
 
         <div class="org-strip reveal delay-4">
