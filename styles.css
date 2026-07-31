@@ -785,23 +785,19 @@ main {
 .person {
   padding: 1.35rem 0;
   border-top: 1px solid var(--line);
-}
-
-.speakers .person,
-.organizers .person {
   text-align: center;
 }
 
 .avatar {
-  width: 8.5rem;
-  height: 8.5rem;
-  margin: 0 0 0.85rem;
+  width: 17rem;
+  height: 17rem;
+  margin: 0 auto 0.85rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.85rem;
+  font-size: 3.2rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--teal-deep);
@@ -810,12 +806,6 @@ main {
     linear-gradient(145deg, rgba(90, 143, 175, 0.22), rgba(10, 24, 48, 0.08));
   border: 1px solid rgba(12, 25, 41, 0.1);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-}
-
-.speakers .avatar,
-.organizers .avatar {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .avatar-photo {
