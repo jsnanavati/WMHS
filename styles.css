@@ -322,10 +322,19 @@ main {
   padding-left: var(--page-pad);
   padding-right: var(--page-pad);
   box-sizing: border-box;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url("assets/hero-curves.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 140% 58%;
+  opacity: 0.42;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .org-strip {
@@ -397,13 +406,21 @@ main {
 
 .hero-copy {
   position: relative;
-  max-width: 44rem;
+  z-index: 1;
+  max-width: 48rem;
   width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.5rem 1.25rem 1.25rem;
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 45%,
+    rgba(245, 247, 250, 0.88) 0%,
+    rgba(245, 247, 250, 0.55) 45%,
+    rgba(245, 247, 250, 0) 72%
+  );
 }
 
 .eyebrow {
@@ -419,43 +436,36 @@ main {
 .hero .eyebrow {
   text-transform: none;
   letter-spacing: 0.04em;
-  font-size: 1.05rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
   font-weight: 500;
 }
 
 .brand-hero {
-  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  font-size: clamp(3.1rem, 8vw, 5.2rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--teal-deep);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   max-width: 16ch;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.8vw, 1.65rem);
+  font-size: clamp(1.5rem, 3.4vw, 2.05rem);
   font-weight: 600;
   line-height: 1.35;
   color: var(--ink);
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   max-width: none;
 }
 
 .hero-meta {
   display: block;
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   font-weight: 500;
   color: var(--muted);
-}
-
-.hero-lede {
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-  max-width: 42ch;
-  margin: 0 auto 1.6rem;
 }
 
 .hero-actions {

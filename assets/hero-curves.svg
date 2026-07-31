@@ -2,19 +2,19 @@
   <defs>
     <linearGradient id="curveFade" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#0A1830" stop-opacity="0"/>
-      <stop offset="55%" stop-color="#0A1830" stop-opacity="0.03"/>
-      <stop offset="100%" stop-color="#0A1830" stop-opacity="0.08"/>
+      <stop offset="55%" stop-color="#0A1830" stop-opacity="0.015"/>
+      <stop offset="100%" stop-color="#0A1830" stop-opacity="0.04"/>
     </linearGradient>
     <linearGradient id="washA" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3D8FBF" stop-opacity="0.18"/>
+      <stop offset="0%" stop-color="#3D8FBF" stop-opacity="0.1"/>
       <stop offset="100%" stop-color="#3D8FBF" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="washB" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C9853F" stop-opacity="0.16"/>
+      <stop offset="0%" stop-color="#C9853F" stop-opacity="0.09"/>
       <stop offset="100%" stop-color="#C9853F" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="washC" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2A9B8F" stop-opacity="0.14"/>
+      <stop offset="0%" stop-color="#2A9B8F" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0"/>
     </linearGradient>
   </defs>
@@ -22,11 +22,11 @@
   <ellipse cx="360" cy="280" rx="320" ry="120" fill="url(#washA)"/>
   <ellipse cx="980" cy="250" rx="300" ry="110" fill="url(#washB)"/>
   <ellipse cx="720" cy="340" rx="380" ry="100" fill="url(#washC)"/>
-  <path d="M-40 260 C120 220, 220 300, 380 250 S620 160, 780 210 S1040 300, 1200 230 S1360 180, 1480 210" fill="none" stroke="#2F6F9A" stroke-width="2.8" stroke-linecap="round" opacity="0.55"/>
-  <path d="M-40 300 C140 270, 260 340, 420 310 S700 220, 860 270 S1100 340, 1280 290 S1400 250, 1480 280" fill="none" stroke="#C9853F" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
-  <path d="M-40 340 C160 320, 280 380, 460 350 S740 280, 920 330 S1160 390, 1340 350 S1420 320, 1480 340" fill="none" stroke="#2A9B8F" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 11" opacity="0.45"/>
-  <path d="M-40 220 C180 180, 320 240, 500 200 S780 140, 960 190 S1180 250, 1360 180 S1440 160, 1480 175" fill="none" stroke="#5B6B9A" stroke-width="2.1" stroke-linecap="round" opacity="0.42"/>
-  <path d="M80 310 C260 250, 420 210, 620 230 S920 300, 1120 260 S1320 220, 1480 245" fill="none" stroke="#D4A017" stroke-width="3" stroke-linecap="round" opacity="0.48"/>
-  <path d="M40 280 C220 340, 400 380, 620 360 S960 300, 1180 340 S1360 380, 1480 365" fill="none" stroke="#B85C38" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 10" opacity="0.4"/>
-  <path d="M20 240 C200 200, 380 160, 580 175 S900 240, 1120 200 S1320 150, 1480 165" fill="none" stroke="#4A8FA8" stroke-width="1.4" stroke-linecap="round" opacity="0.38"/>
+  <path d="M-40 260 C120 220, 220 300, 380 250 S620 160, 780 210 S1040 300, 1200 230 S1360 180, 1480 210" fill="none" stroke="#2F6F9A" stroke-width="2.8" stroke-linecap="round" opacity="0.32"/>
+  <path d="M-40 300 C140 270, 260 340, 420 310 S700 220, 860 270 S1100 340, 1280 290 S1400 250, 1480 280" fill="none" stroke="#C9853F" stroke-width="2.4" stroke-linecap="round" opacity="0.28"/>
+  <path d="M-40 340 C160 320, 280 380, 460 350 S740 280, 920 330 S1160 390, 1340 350 S1420 320, 1480 340" fill="none" stroke="#2A9B8F" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 11" opacity="0.26"/>
+  <path d="M-40 220 C180 180, 320 240, 500 200 S780 140, 960 190 S1180 250, 1360 180 S1440 160, 1480 175" fill="none" stroke="#5B6B9A" stroke-width="2.1" stroke-linecap="round" opacity="0.24"/>
+  <path d="M80 310 C260 250, 420 210, 620 230 S920 300, 1120 260 S1320 220, 1480 245" fill="none" stroke="#D4A017" stroke-width="3" stroke-linecap="round" opacity="0.28"/>
+  <path d="M40 280 C220 340, 400 380, 620 360 S960 300, 1180 340 S1360 380, 1480 365" fill="none" stroke="#B85C38" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 10" opacity="0.22"/>
+  <path d="M20 240 C200 200, 380 160, 580 175 S900 240, 1120 200 S1320 150, 1480 165" fill="none" stroke="#4A8FA8" stroke-width="1.4" stroke-linecap="round" opacity="0.22"/>
 </svg>
