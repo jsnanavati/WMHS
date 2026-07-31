@@ -232,172 +232,6 @@
         </div>
       </section>
 
-      <section class="section topics" id="topics">
-        <div class="section-head">
-          <p class="eyebrow">Topics of Interest</p>
-          <h2>Where simulation, causality, and clinical evidence meet</h2>
-          <p class="section-lede">
-            We invite work that advances reliable, intervention-aware patient world models —
-            including benchmarks, negative results, position papers, and emerging directions.
-          </p>
-        </div>
-        <ul class="topic-list">
-          <li>Patient world models using longitudinal, multimodal clinical data</li>
-          <li>Clinical trial simulation, virtual trial arms, synthetic controls, and external control cohorts</li>
-          <li>Counterfactual outcome prediction, treatment effect modelling, and target trial emulation</li>
-          <li>Foundation models for EHR, clinical trials, real-world evidence, and patient timelines</li>
-          <li>Representation of interventions, treatment regimes, endpoints, eligibility criteria, pathways, and mechanisms of action</li>
-          <li>Causal representation learning, causal inference, and off-policy evaluation for intervention-aware simulation</li>
-          <li>Uncertainty quantification, calibration, abstention, ambiguity, and selective prediction</li>
-          <li>Temporal reasoning, logical consistency, clinical plausibility, and protocol-aware reasoning</li>
-          <li>Agentic systems for trial design, protocol interpretation, evidence synthesis, and clinical research workflows</li>
-          <li>Benchmarking, robustness, and validation against real-world evidence, historical trials, clinical knowledge, and downstream clinical utility</li>
-        </ul>
-      </section>
-
-      <section class="section problems" id="problems">
-        <div class="section-head">
-          <p class="eyebrow">Open Problems</p>
-          <h2>What the workshop aims to advance</h2>
-        </div>
-        <div class="problem-grid">
-          <article>
-            <h3>Representation &amp; simulation</h3>
-            <p>
-              Represent patient histories as temporal clinical states; move from observed-care
-              prediction to intervention simulation; incorporate mechanisms of action, biomarkers,
-              and patient heterogeneity.
-            </p>
-          </article>
-          <article>
-            <h3>Uncertainty &amp; reliability</h3>
-            <p>
-              Quantify uncertainty, ambiguity, shift, and abstention when confident errors are
-              dangerous — and define reliability standards for when simulations can inform trial
-              design or evidence generation.
-            </p>
-          </article>
-          <article>
-            <h3>Validation &amp; deployment</h3>
-            <p>
-              Evaluate often-unobserved counterfactuals through historical trial emulation, synthetic
-              controls, negative controls, subgroup calibration, benchmarks, and prospective
-              protocols.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section about" id="about">
-        <div class="section-head">
-          <p class="eyebrow">Overview</p>
-          <h2>Clinical trial simulation as a stress test for world models</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-main">
-            <p>
-              Clinical trial simulation is a uniquely demanding and falsifiable testbed for one of
-              the central open problems in machine learning: building reliable world models of
-              complex, partially observed, intervention-rich systems.
-            </p>
-            <p>
-              This workshop focuses on <strong class="term">patient world models</strong> — generative and
-              reasoning-capable systems that learn from patient trajectories, trial protocols,
-              interventions, mechanisms of action, and real-world evidence to support clinical trial
-              simulation and decision-making.
-            </p>
-          </div>
-          <div class="about-visual" aria-hidden="true">
-            <svg class="about-art" viewBox="0 0 420 220" role="img">
-              <defs>
-                <linearGradient id="aboutFlow" x1="0%" y1="50%" x2="100%" y2="50%">
-                  <stop offset="0%" stop-color="#2F6F9A" stop-opacity="0.15" />
-                  <stop offset="50%" stop-color="#C9853F" stop-opacity="0.22" />
-                  <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0.15" />
-                </linearGradient>
-              </defs>
-              <rect width="420" height="220" rx="18" fill="#e8eef4" />
-              <g stroke="#ffffff" stroke-width="1.5" fill="none">
-                <path d="M28 52 H392 M28 96 H392 M28 140 H392 M28 184 H392" />
-                <path d="M72 28 V192 M140 28 V192 M208 28 V192 M276 28 V192 M344 28 V192" />
-              </g>
-              <!-- Twin worlds: factual vs intervened -->
-              <rect x="36" y="40" width="160" height="140" rx="16" fill="url(#aboutFlow)" opacity="0.55" />
-              <rect x="224" y="40" width="160" height="140" rx="16" fill="url(#aboutFlow)" opacity="0.85" />
-              <!-- Factual chain (left) -->
-              <g fill="none" stroke-linecap="round">
-                <path d="M70 150 C95 120, 110 90, 140 78" stroke="#5B6B9A" stroke-width="2" />
-                <path d="M140 78 C155 100, 160 125, 155 155" stroke="#2F6F9A" stroke-width="2.1" />
-                <path d="M70 150 C100 155, 130 158, 155 155" stroke="#2A9B8F" stroke-width="1.7" opacity="0.8" />
-              </g>
-              <circle cx="70" cy="150" r="8" fill="#5B6B9A" />
-              <circle cx="140" cy="78" r="9" fill="#2F6F9A" />
-              <circle cx="155" cy="155" r="8" fill="#2A9B8F" />
-              <!-- Bridge / intervention shift -->
-              <path d="M196 110 H228" stroke="#C9853F" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 5" />
-              <circle cx="212" cy="110" r="7" fill="#C9853F" />
-              <g stroke="#C9853F" stroke-width="2" stroke-linecap="round">
-                <line x1="204" y1="102" x2="220" y2="118" />
-                <line x1="220" y1="102" x2="204" y2="118" />
-              </g>
-              <!-- Intervened twin (right): same skeleton, remapped path -->
-              <g fill="none" stroke-linecap="round">
-                <path d="M258 150 C275 140, 285 95, 310 78" stroke="#5B6B9A" stroke-width="1.5" opacity="0.35" stroke-dasharray="4 6" />
-                <path d="M258 150 C290 100, 320 85, 350 88" stroke="#C9853F" stroke-width="2.4" />
-                <path d="M350 88 C360 115, 355 140, 345 155" stroke="#2A9B8F" stroke-width="2.1" />
-                <path d="M258 150 C290 160, 320 162, 345 155" stroke="#D4A017" stroke-width="1.6" opacity="0.85" />
-              </g>
-              <circle cx="258" cy="150" r="8" fill="#5B6B9A" />
-              <circle cx="350" cy="88" r="11" fill="#C9853F" />
-              <circle cx="345" cy="155" r="8" fill="#2A9B8F" />
-            </svg>
-          </div>
-          <aside class="about-aside">
-            <h3>Why now</h3>
-            <p>
-              Foundation models, sequence models, and generative simulators are converging with
-              healthcare AI’s shift from static risk prediction toward longitudinal modelling,
-              treatment response estimation, and real-world evidence — yet reliability in
-              high-stakes medical settings remains unresolved.
-            </p>
-            <h3>Who should attend</h3>
-            <p>
-              Researchers and practitioners across machine learning, healthcare AI, causal inference,
-              biostatistics, clinical development, epidemiology, AI for science, uncertainty and
-              trustworthy ML, reasoning systems, digital health, pharma / biotech, real-world evidence,
-              regulatory science, and translational medicine — including academia, industry, clinical
-              research organizations, and interdisciplinary teams.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section dates" id="dates">
-        <div class="section-head">
-          <p class="eyebrow">Important Dates</p>
-          <h2>Submission timeline</h2>
-          <p class="section-lede">All deadlines are Anywhere on Earth (AoE).</p>
-        </div>
-        <ol class="date-rail">
-          <li>
-            <time datetime="2026-08-29">Aug 29, 2026</time>
-            <span>Paper submission deadline</span>
-          </li>
-          <li>
-            <time datetime="2026-09">September 2026</time>
-            <span>Review period</span>
-          </li>
-          <li>
-            <time datetime="2026-09-29">Sep 29, 2026</time>
-            <span>Author notification</span>
-          </li>
-          <li>
-            <time datetime="2026-12">December 2026</time>
-            <span>Workshop at NeurIPS 2026 · Atlanta</span>
-          </li>
-        </ol>
-      </section>
-
       <section class="section schedule" id="schedule">
         <div class="section-head">
           <p class="eyebrow">Program</p>
@@ -514,6 +348,88 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="section topics" id="topics">
+        <div class="section-head">
+          <p class="eyebrow">Topics of Interest</p>
+          <h2>Where simulation, causality, and clinical evidence meet</h2>
+          <p class="section-lede">
+            We invite work that advances reliable, intervention-aware patient world models —
+            including benchmarks, negative results, position papers, and emerging directions.
+          </p>
+        </div>
+        <ul class="topic-list">
+          <li>Patient world models using longitudinal, multimodal clinical data</li>
+          <li>Clinical trial simulation, virtual trial arms, synthetic controls, and external control cohorts</li>
+          <li>Counterfactual outcome prediction, treatment effect modelling, and target trial emulation</li>
+          <li>Foundation models for EHR, clinical trials, real-world evidence, and patient timelines</li>
+          <li>Representation of interventions, treatment regimes, endpoints, eligibility criteria, pathways, and mechanisms of action</li>
+          <li>Causal representation learning, causal inference, and off-policy evaluation for intervention-aware simulation</li>
+          <li>Uncertainty quantification, calibration, abstention, ambiguity, and selective prediction</li>
+          <li>Temporal reasoning, logical consistency, clinical plausibility, and protocol-aware reasoning</li>
+          <li>Agentic systems for trial design, protocol interpretation, evidence synthesis, and clinical research workflows</li>
+          <li>Benchmarking, robustness, and validation against real-world evidence, historical trials, clinical knowledge, and downstream clinical utility</li>
+        </ul>
+      </section>
+
+      <section class="section problems" id="problems">
+        <div class="section-head">
+          <p class="eyebrow">Open Problems</p>
+          <h2>What the workshop aims to advance</h2>
+        </div>
+        <div class="problem-grid">
+          <article>
+            <h3>Representation &amp; simulation</h3>
+            <p>
+              Represent patient histories as temporal clinical states; move from observed-care
+              prediction to intervention simulation; incorporate mechanisms of action, biomarkers,
+              and patient heterogeneity.
+            </p>
+          </article>
+          <article>
+            <h3>Uncertainty &amp; reliability</h3>
+            <p>
+              Quantify uncertainty, ambiguity, shift, and abstention when confident errors are
+              dangerous — and define reliability standards for when simulations can inform trial
+              design or evidence generation.
+            </p>
+          </article>
+          <article>
+            <h3>Validation &amp; deployment</h3>
+            <p>
+              Evaluate often-unobserved counterfactuals through historical trial emulation, synthetic
+              controls, negative controls, subgroup calibration, benchmarks, and prospective
+              protocols.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dates" id="dates">
+        <div class="section-head">
+          <p class="eyebrow">Important Dates</p>
+          <h2>Submission timeline</h2>
+          <p class="section-lede">All deadlines are Anywhere on Earth (AoE).</p>
+        </div>
+        <ol class="date-rail">
+          <li>
+            <time datetime="2026-08-29">Aug 29, 2026</time>
+            <span>Paper submission deadline</span>
+          </li>
+          <li>
+            <time datetime="2026-09">September 2026</time>
+            <span>Review period</span>
+          </li>
+          <li>
+            <time datetime="2026-09-29">Sep 29, 2026</time>
+            <span>Author notification</span>
+          </li>
+          <li>
+            <time datetime="2026-12">December 2026</time>
+            <span>Workshop at NeurIPS 2026 · Atlanta</span>
+          </li>
+        </ol>
       </section>
 
       <section class="section organizers" id="organizers">
