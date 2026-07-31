@@ -839,33 +839,8 @@ main {
   color: var(--gold);
 }
 
-.panel-layout {
-  display: grid;
-  gap: 1.5rem;
-}
-
 .panel .person {
   text-align: center;
-}
-
-.moderator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-  border: 1px solid rgba(12, 25, 41, 0.1);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(224, 230, 237, 0.48));
-  min-width: 0;
-}
-
-.moderator .avatar,
-.moderator .avatar-photo {
-  width: min(12.5rem, 100%);
-  max-width: 12.5rem;
 }
 
 .schedule-table {
@@ -1135,11 +1110,6 @@ main {
   .organizers-grid,
   .panel-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .panel-layout {
-    grid-template-columns: minmax(14rem, 0.9fr) 1.1fr;
-    align-items: start;
   }
 }
 
