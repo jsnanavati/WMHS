@@ -793,15 +793,15 @@ main {
 }
 
 .avatar {
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 8.5rem;
+  height: 8.5rem;
   margin: 0 0 0.85rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.85rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--teal-deep);
@@ -847,6 +847,11 @@ main {
 .person .affil {
   color: var(--muted);
   margin-bottom: 0.45rem;
+}
+
+.speakers .person .affil,
+.organizers .person .affil {
+  margin-bottom: 0;
 }
 
 .person .topic {
@@ -922,23 +927,6 @@ main {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
-}
-
-.pc-groups {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.pc-group h3 {
-  font-size: 1.25rem;
-  color: var(--teal-deep);
-  margin-bottom: 0.35rem;
-}
-
-.pc-group p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
 }
 
 .cfp-grid {
@@ -1180,11 +1168,6 @@ main {
   .panel-layout {
     grid-template-columns: 0.85fr 1.15fr;
     align-items: start;
-  }
-
-  .pc-groups {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.75rem 2.5rem;
   }
 }
 
