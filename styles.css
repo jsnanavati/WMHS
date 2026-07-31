@@ -390,7 +390,7 @@ main {
   max-width: var(--max);
   margin-top: 0;
   padding: clamp(0.85rem, 2.2vh, 1.5rem) 0;
-  border-top: 0;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   text-align: center;
   background: linear-gradient(
@@ -491,7 +491,7 @@ main {
 .hero .eyebrow {
   text-transform: none;
   letter-spacing: 0.04em;
-  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 500;
 }
 
@@ -505,7 +505,7 @@ main {
 }
 
 .brand-hero {
-  font-size: clamp(3.6rem, 9.5vw, 6.2rem);
+  font-size: clamp(2.6rem, 6.5vw, 4.2rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--teal-deep);
@@ -515,7 +515,7 @@ main {
 
 .hero-subhead {
   font-family: var(--font-display);
-  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  font-size: clamp(0.95rem, 1.9vw, 1.25rem);
   font-weight: 500;
   font-style: italic;
   line-height: 1.25;
@@ -530,7 +530,7 @@ main {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.45rem);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
   font-weight: 600;
   line-height: 1.35;
   color: var(--ink);
@@ -542,7 +542,7 @@ main {
   display: block;
   margin-top: 0.35rem;
   font-family: var(--font-body);
-  font-size: clamp(1.15rem, 2.1vw, 1.35rem);
+  font-size: clamp(0.98rem, 1.7vw, 1.15rem);
   font-weight: 500;
   color: var(--muted);
 }
