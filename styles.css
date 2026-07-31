@@ -322,14 +322,10 @@ main {
   padding-left: var(--page-pad);
   padding-right: var(--page-pad);
   box-sizing: border-box;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
+  background-image: url("assets/hero-curves.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 140% 58%;
 }
 
 .org-strip {
@@ -401,7 +397,6 @@ main {
 
 .hero-copy {
   position: relative;
-  z-index: 1;
   max-width: 44rem;
   width: 100%;
   margin: 0 auto;
@@ -468,129 +463,6 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
-}
-
-.trajectory-bg {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 140vw;
-  max-width: none;
-  height: 58%;
-  min-height: 260px;
-  opacity: 0.9;
-}
-
-.wash {
-  opacity: 0;
-  animation: washIn 1.4s ease forwards;
-}
-
-.wash-a { animation-delay: 0.05s; }
-.wash-b { animation-delay: 0.2s; }
-.wash-c { animation-delay: 0.35s; }
-
-@keyframes washIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.trail {
-  stroke-dasharray: 2200;
-  stroke-dashoffset: 2200;
-  animation: draw 3.2s ease forwards;
-}
-
-.trail-a {
-  stroke-width: 2.8;
-  opacity: 0.72;
-  animation-delay: 0.1s;
-}
-
-.trail-b {
-  stroke-width: 2.4;
-  opacity: 0.68;
-  animation-delay: 0.25s;
-}
-
-.trail-c {
-  stroke-width: 2;
-  stroke-dasharray: 7 11;
-  stroke-dashoffset: 0;
-  opacity: 0;
-  animation: trailFade 1.4s ease forwards;
-  animation-delay: 0.55s;
-}
-
-.trail-d {
-  stroke-width: 2.1;
-  opacity: 0.58;
-  animation-delay: 0.4s;
-}
-
-.trail-e {
-  stroke-width: 3;
-  opacity: 0.62;
-  animation-delay: 0.7s;
-}
-
-.trail-f {
-  stroke-width: 1.6;
-  stroke-dasharray: 5 10;
-  stroke-dashoffset: 0;
-  opacity: 0;
-  animation: trailFade 1.5s ease forwards;
-  animation-delay: 0.95s;
-}
-
-.trail-g {
-  stroke-width: 1.4;
-  opacity: 0.5;
-  animation-delay: 0.85s;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes trailFade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.72;
-  }
-}
-
-.node {
-  stroke: rgba(255, 255, 255, 0.55);
-  stroke-width: 1.4;
-  opacity: 0;
-  animation: pop 0.55s ease forwards;
-  filter: drop-shadow(0 1px 3px rgba(12, 25, 41, 0.18));
-}
-
-.n1 { animation-delay: 0.9s; fill: #2F6F9A; }
-.n2 { animation-delay: 1.05s; fill: #C9853F; }
-.n3 { animation-delay: 1.2s; fill: #2F6F9A; }
-.n4 { animation-delay: 1.35s; fill: #C9853F; }
-.n5 { animation-delay: 1.5s; fill: #D4A017; }
-.n6 { animation-delay: 1.65s; fill: #5B6B9A; }
-.n7 { animation-delay: 1.8s; fill: #2A9B8F; }
-.n8 { animation-delay: 1.95s; fill: #D4A017; }
-
-@keyframes pop {
-  from {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .reveal {
