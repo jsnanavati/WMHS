@@ -808,6 +808,26 @@ main {
   box-shadow: none;
 }
 
+.avatar-figure {
+  color: var(--teal);
+}
+
+.avatar-figure svg {
+  width: 48%;
+  height: 48%;
+  max-width: none;
+  fill: currentColor;
+  opacity: 0.72;
+}
+
+.avatar-figure circle {
+  fill: currentColor;
+}
+
+.avatar-figure path {
+  fill: currentColor;
+}
+
 .person h3 {
   font-size: 1.45rem;
   margin-bottom: 0.2rem;
