@@ -599,6 +599,12 @@ main {
   font-size: clamp(1.65rem, 3.4vw, 2.35rem);
 }
 
+.cfp-topics-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  color: var(--teal-deep);
+  margin-bottom: 0;
+}
+
 .section-head {
   max-width: 42rem;
   margin: 0 auto 2rem;
