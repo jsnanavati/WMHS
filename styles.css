@@ -637,51 +637,6 @@ main {
   box-shadow: var(--shadow);
 }
 
-.central-q-band {
-  width: 100%;
-  margin: 0;
-  padding: 0.2rem 0 clamp(2.75rem, 7vh, 4.5rem);
-  text-align: center;
-}
-
-.central-q-label {
-  margin: 0 0 1.1rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.central-q {
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: var(--ink);
-  margin: 0 auto;
-  max-width: 22em;
-  text-align: center;
-  border: none;
-  padding: 0;
-}
-
-.central-q .term {
-  font-family: inherit;
-  font-weight: 700;
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 0.18em;
-  text-decoration-color: var(--gold-soft);
-}
-
-.central-q .nowrap {
-  white-space: nowrap;
-}
-
 .about-aside {
   padding: 1.5rem 0 0;
   border-top: 1px solid var(--line);
@@ -780,15 +735,18 @@ main {
 }
 
 .avatar {
-  width: 17rem;
-  height: 17rem;
+  width: min(17rem, 100%);
+  max-width: 17rem;
+  aspect-ratio: 1 / 1;
+  height: auto;
   margin: 0 auto 0.85rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   font-family: var(--font-display);
-  font-size: 3.2rem;
+  font-size: clamp(1.6rem, 4vw, 3.2rem);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--teal-deep);
@@ -801,11 +759,16 @@ main {
 
 .avatar-photo {
   display: block;
+  width: min(17rem, 100%);
+  max-width: 17rem;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   object-position: center top;
   padding: 0;
   background: none;
   box-shadow: none;
+  flex-shrink: 0;
 }
 
 .avatar-figure {
@@ -896,6 +859,13 @@ main {
   border-radius: var(--radius);
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(224, 230, 237, 0.48));
+  min-width: 0;
+}
+
+.moderator .avatar,
+.moderator .avatar-photo {
+  width: min(12.5rem, 100%);
+  max-width: 12.5rem;
 }
 
 .schedule-table {
@@ -1168,7 +1138,7 @@ main {
   }
 
   .panel-layout {
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: minmax(14rem, 0.9fr) 1.1fr;
     align-items: start;
   }
 }
