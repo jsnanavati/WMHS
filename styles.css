@@ -831,7 +831,7 @@ main {
 
 .badge {
   display: inline-block;
-  margin: 0 0 0.5rem;
+  margin: 0.45rem 0 0;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
