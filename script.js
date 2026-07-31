@@ -18,6 +18,16 @@
   }
 
   const header = document.querySelector(".site-header");
+  const setHeaderHeight = () => {
+    if (!header) return;
+    document.documentElement.style.setProperty(
+      "--header-h",
+      `${header.offsetHeight}px`
+    );
+  };
+  setHeaderHeight();
+  window.addEventListener("resize", setHeaderHeight);
+
   const onScroll = () => {
     if (!header) return;
     header.style.boxShadow =
@@ -45,4 +55,49 @@
       io.observe(section);
     });
   }
+
+  const title = document.querySelector(".brand-hero");
+  const subhead = document.querySelector(".hero-subhead");
+
+  const fitSubheadTracking = () => {
+    if (!title || !subhead) return;
+
+    const target = title.getBoundingClientRect().width;
+    if (!target) return;
+
+    subhead.style.width = `${target}px`;
+    subhead.style.letterSpacing = "0px";
+
+    if (subhead.scrollWidth > target) {
+      // Already wider than the title: keep snug tracking, allow wrap.
+      subhead.style.whiteSpace = "normal";
+      subhead.style.letterSpacing = "0.01em";
+      return;
+    }
+
+    subhead.style.whiteSpace = "nowrap";
+
+    let lo = 0;
+    let hi = 24;
+    for (let i = 0; i < 24; i += 1) {
+      const mid = (lo + hi) / 2;
+      subhead.style.letterSpacing = `${mid}px`;
+      if (subhead.scrollWidth > target) hi = mid;
+      else lo = mid;
+    }
+
+    subhead.style.letterSpacing = `${Math.max(0, lo)}px`;
+  };
+
+  const scheduleFit = () => {
+    window.requestAnimationFrame(fitSubheadTracking);
+  };
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(scheduleFit);
+  } else {
+    scheduleFit();
+  }
+
+  window.addEventListener("resize", scheduleFit);
 })();
