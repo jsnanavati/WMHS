@@ -776,6 +776,98 @@ main {
   gap: 1rem;
 }
 
+.people-grid.lineup {
+  max-width: 66rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 17rem));
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.lineup-group {
+  margin-top: clamp(2rem, 5vh, 3.25rem);
+}
+
+.lineup-group:first-of-type {
+  margin-top: clamp(1.25rem, 3vh, 2rem);
+}
+
+.lineup-subhead {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.6rem);
+  color: var(--ink);
+  letter-spacing: 0.005em;
+  margin: 0 auto clamp(1.25rem, 3vh, 2rem);
+  padding-bottom: 0.6rem;
+  position: relative;
+  width: fit-content;
+}
+
+.lineup-subhead::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: var(--accent, #C9853F);
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.person-placeholder {
+  color: var(--muted);
+}
+
+.person-placeholder h3,
+.person-placeholder .role,
+.person-placeholder .affil {
+  color: var(--muted);
+}
+
+.avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(17rem, 100%);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  border: 2px dashed rgba(12, 25, 41, 0.22);
+  background: rgba(12, 25, 41, 0.03);
+  color: rgba(12, 25, 41, 0.35);
+  flex-shrink: 0;
+}
+
+.placeholder-plus {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(12, 25, 41, 0.4);
+}
+
+.badge-role-placeholder {
+  visibility: hidden;
+}
+
+.lineup-announcement {
+  margin: clamp(2rem, 4vh, 2.5rem) auto 0;
+  max-width: 40rem;
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.section-head-panel {
+  max-width: 52rem;
+}
+
 .person {
   padding: 1.35rem 0;
   border-top: 1px solid var(--line);
@@ -934,7 +1026,22 @@ main {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.badge {
   color: var(--gold);
+}
+
+.badge-role {
+  margin: 0 auto 0.55rem;
+  padding: 0.32rem 0.95rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--teal-deep);
+  background: rgba(90, 143, 175, 0.14);
+  border: 1px solid rgba(90, 143, 175, 0.35);
+  border-radius: 999px;
 }
 
 .panel .person {
@@ -1188,6 +1295,29 @@ main {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.95rem;
   color: var(--teal-deep);
+}
+
+.cfp-key-dates {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.cfp-key-dates li {
+  padding: 0.85rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid rgba(12, 25, 41, 0.08);
+  border-radius: 12px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.cfp-key-dates strong {
+  color: var(--ink);
+  min-width: 12rem;
+  display: inline-block;
 }
 
 .cfp-grid {
@@ -1491,6 +1621,10 @@ main {
   .organizers-grid,
   .panel-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .people-grid.lineup {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 17rem));
   }
 }
 

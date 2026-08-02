@@ -36,21 +36,25 @@
         <span class="brand-text">WMHS @ NeurIPS 2026</span>
       </a>
       <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#cfp">Call for Papers</a>
         <a href="#speakers">Speakers</a>
         <a href="#schedule">Program</a>
-        <a href="#cfp">Call for Papers</a>
         <a href="#organizers">Organizers</a>
       </nav>
-      <a class="btn btn-small" href="#cfp">Submit</a>
+      <a class="btn btn-small" href="#submit">Submit</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
         <span></span><span></span>
       </button>
     </header>
 
     <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#cfp">Call for Papers</a>
       <a href="#speakers">Speakers</a>
       <a href="#schedule">Program</a>
-      <a href="#cfp">Call for Papers</a>
       <a href="#organizers">Organizers</a>
     </div>
 
@@ -105,163 +109,345 @@
         </div>
       </section>
 
-      <section class="section speakers" id="speakers">
+      <section class="section about" id="about">
         <div class="section-head">
-          <p class="eyebrow">Invited Speakers</p>
-          <h2>Voices across world models, causality, and clinical AI</h2>
+          <p class="eyebrow">About the workshop</p>
+          <h2>Clinical trial simulation as a stress test for world models</h2>
         </div>
-        <div class="people-grid speakers-grid">
-          <article class="person">
-            <a class="avatar-link" href="https://nathankallus.com/" target="_blank" rel="noopener noreferrer" aria-label="Nathan Kallus personal website">
-              <img class="avatar avatar-photo" src="assets/people/nathan-kallus.png" alt="Nathan Kallus" width="272" height="272" />
-              <span class="avatar-overlay" aria-hidden="true">
-                <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                </svg>
-              </span>
-            </a>
-            <h3>Nathan Kallus</h3>
-            <p class="role">Assistant Professor of Medical AI</p>
-            <p class="affil">Cornell University</p>
-          </article>
-          <article class="person">
-            <a class="avatar-link" href="https://profiles.ucl.ac.uk/80245-chris-tomlinson" target="_blank" rel="noopener noreferrer" aria-label="Chris Tomlinson UCL profile">
-              <img class="avatar avatar-photo" src="assets/people/chris-tomlinson.png" alt="Chris Tomlinson" width="272" height="272" />
-              <span class="avatar-overlay" aria-hidden="true">
-                <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                </svg>
-              </span>
-            </a>
-            <h3>Chris Tomlinson</h3>
-            <p class="role">Senior Fellow in Clinical Foundation Models</p>
-            <p class="affil">UCL / NHS Foresight</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Speaker to be confirmed</p>
-            <p class="affil">GSK</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Speaker to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Speaker to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Speaker to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
+        <div class="about-grid">
+          <div class="about-main">
+            <p>
+              Clinical trial simulation is a uniquely demanding and falsifiable testbed for one of
+              the central open problems in machine learning: building reliable world models of
+              complex, partially observed, intervention-rich systems.
+            </p>
+            <p>
+              This workshop focuses on <strong class="term">patient world models</strong> — generative and
+              reasoning-capable systems that learn from patient trajectories, trial protocols,
+              interventions, mechanisms of action, and real-world evidence to support clinical trial
+              simulation and decision-making.
+            </p>
+          </div>
+          <div class="about-visual" aria-hidden="true">
+            <svg class="about-art" viewBox="0 0 420 220" role="img">
+              <defs>
+                <linearGradient id="aboutFlow" x1="0%" y1="50%" x2="100%" y2="50%">
+                  <stop offset="0%" stop-color="#2F6F9A" stop-opacity="0.15" />
+                  <stop offset="50%" stop-color="#C9853F" stop-opacity="0.22" />
+                  <stop offset="100%" stop-color="#2A9B8F" stop-opacity="0.15" />
+                </linearGradient>
+              </defs>
+              <rect width="420" height="220" rx="18" fill="#e8eef4" />
+              <g stroke="#ffffff" stroke-width="1.5" fill="none">
+                <path d="M28 52 H392 M28 96 H392 M28 140 H392 M28 184 H392" />
+                <path d="M72 28 V192 M140 28 V192 M208 28 V192 M276 28 V192 M344 28 V192" />
+              </g>
+              <!-- Twin worlds: factual vs intervened -->
+              <rect x="36" y="40" width="160" height="140" rx="16" fill="url(#aboutFlow)" opacity="0.55" />
+              <rect x="224" y="40" width="160" height="140" rx="16" fill="url(#aboutFlow)" opacity="0.85" />
+              <!-- Factual chain (left) -->
+              <g fill="none" stroke-linecap="round">
+                <path d="M70 150 C95 120, 110 90, 140 78" stroke="#5B6B9A" stroke-width="2" />
+                <path d="M140 78 C155 100, 160 125, 155 155" stroke="#2F6F9A" stroke-width="2.1" />
+                <path d="M70 150 C100 155, 130 158, 155 155" stroke="#2A9B8F" stroke-width="1.7" opacity="0.8" />
+              </g>
+              <circle cx="70" cy="150" r="8" fill="#5B6B9A" />
+              <circle cx="140" cy="78" r="9" fill="#2F6F9A" />
+              <circle cx="155" cy="155" r="8" fill="#2A9B8F" />
+              <!-- Bridge / intervention shift -->
+              <path d="M196 110 H228" stroke="#C9853F" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 5" />
+              <circle cx="212" cy="110" r="7" fill="#C9853F" />
+              <g stroke="#C9853F" stroke-width="2" stroke-linecap="round">
+                <line x1="204" y1="102" x2="220" y2="118" />
+                <line x1="220" y1="102" x2="204" y2="118" />
+              </g>
+              <!-- Intervened twin (right): same skeleton, remapped path -->
+              <g fill="none" stroke-linecap="round">
+                <path d="M258 150 C275 140, 285 95, 310 78" stroke="#5B6B9A" stroke-width="1.5" opacity="0.35" stroke-dasharray="4 6" />
+                <path d="M258 150 C290 100, 320 85, 350 88" stroke="#C9853F" stroke-width="2.4" />
+                <path d="M350 88 C360 115, 355 140, 345 155" stroke="#2A9B8F" stroke-width="2.1" />
+                <path d="M258 150 C290 160, 320 162, 345 155" stroke="#D4A017" stroke-width="1.6" opacity="0.85" />
+              </g>
+              <circle cx="258" cy="150" r="8" fill="#5B6B9A" />
+              <circle cx="350" cy="88" r="11" fill="#C9853F" />
+              <circle cx="345" cy="155" r="8" fill="#2A9B8F" />
+            </svg>
+          </div>
+          <aside class="about-aside">
+            <h3>Why now</h3>
+            <p>
+              Foundation models, sequence models, and generative simulators are converging with
+              healthcare AI’s shift from static risk prediction toward longitudinal modelling,
+              treatment response estimation, and real-world evidence — yet reliability in
+              high-stakes medical settings remains unresolved.
+            </p>
+            <h3>Who should attend</h3>
+            <p>
+              Researchers and practitioners across machine learning, healthcare AI, causal inference,
+              biostatistics, clinical development, epidemiology, AI for science, uncertainty and
+              trustworthy ML, reasoning systems, digital health, pharma / biotech, real-world evidence,
+              regulatory science, and translational medicine — including academia, industry, clinical
+              research organizations, and interdisciplinary teams.
+            </p>
+          </aside>
         </div>
       </section>
 
-      <section class="section panel" id="panel">
+      <section class="section topics" id="topics">
         <div class="section-head">
-          <p class="eyebrow">Panel Discussion</p>
-          <h2>What would make world models trustworthy enough for clinical trial simulation?</h2>
+          <p class="eyebrow">Topics of Interest</p>
+          <h2>Where simulation, causality, and clinical evidence meet</h2>
+          <p class="section-lede">
+            We invite work that advances reliable, intervention-aware patient world models —
+            including benchmarks, negative results, position papers, and emerging directions.
+          </p>
         </div>
-        <div class="people-grid panel-grid">
-          <article class="person">
-            <a class="avatar-link" href="https://uk.linkedin.com/in/raja-shankar-4b80b41" target="_blank" rel="noopener noreferrer" aria-label="Raja Shankar LinkedIn profile">
-              <img class="avatar avatar-photo" src="assets/people/raja-shankar.png" alt="Raja Shankar" width="272" height="272" />
-              <span class="avatar-overlay" aria-hidden="true">
-                <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                </svg>
-              </span>
-            </a>
-            <h3>Raja Shankar</h3>
-            <p class="role">VP Machine Learning</p>
-            <p class="affil">IQVIA</p>
-            <p class="badge">Moderator</p>
-          </article>
-          <article class="person">
-            <a class="avatar-link" href="https://roseyu.com/" target="_blank" rel="noopener noreferrer" aria-label="Rose Yu personal website">
-              <img class="avatar avatar-photo" src="assets/people/rose-yu.png" alt="Rose Yu" width="272" height="272" />
-              <span class="avatar-overlay" aria-hidden="true">
-                <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                </svg>
-              </span>
-            </a>
-            <h3>Rose Yu</h3>
-            <p class="role">Assistant Professor of Computer Science</p>
-            <p class="affil">UC San Diego</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Panelist to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Panelist to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Panelist to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
-          <article class="person">
-            <div class="avatar avatar-figure" aria-hidden="true">
-              <svg viewBox="0 0 64 64" focusable="false">
-                <circle cx="32" cy="22" r="12" />
-                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
-              </svg>
-            </div>
-            <h3>TBC</h3>
-            <p class="role">Panelist to be confirmed</p>
-            <p class="affil">TBC</p>
-          </article>
+        <ul class="topic-list">
+          <li>Patient world models using longitudinal, multimodal clinical data</li>
+          <li>Clinical trial simulation, virtual trial arms, synthetic controls, and external control cohorts</li>
+          <li>Counterfactual outcome prediction, treatment effect modelling, and target trial emulation</li>
+          <li>Foundation models for EHR, clinical trials, real-world evidence, and patient timelines</li>
+          <li>Representation of interventions, treatment regimes, endpoints, eligibility criteria, pathways, and mechanisms of action</li>
+          <li>Causal representation learning, causal inference, and off-policy evaluation for intervention-aware simulation</li>
+          <li>Uncertainty quantification, calibration, abstention, ambiguity, and selective prediction</li>
+          <li>Temporal reasoning, logical consistency, clinical plausibility, and protocol-aware reasoning</li>
+          <li>Agentic systems for trial design, protocol interpretation, evidence synthesis, and clinical research workflows</li>
+          <li>Benchmarking, robustness, and validation against real-world evidence, historical trials, clinical knowledge, and downstream clinical utility</li>
+        </ul>
+      </section>
+
+      <section class="section cfp" id="cfp">
+        <div class="section-head section-head-wide">
+          <h2>Call for Papers</h2>
+          <p class="section-lede">
+            <strong>World Models for High-Stakes Health (NeurIPS 2026)</strong> invites
+            submissions on architectures, algorithms, theory, empirical studies, benchmarks,
+            demonstrations, and position papers related to patient world models,
+            intervention-aware modelling, clinical trial simulation, virtual populations, and the
+            evaluation and reliable deployment of AI in high-stakes healthcare. Submissions must
+            present original, unpublished work that has not appeared at NeurIPS or other
+            archival machine-learning venues.
+          </p>
         </div>
+
+        <div class="cfp-subsection" id="dates">
+          <div class="section-head">
+            <h2>Key dates</h2>
+          </div>
+          <div class="cfp-prose">
+            <ul class="cfp-key-dates">
+              <li><strong>Submission deadline:</strong> September 1, 2026, AoE.</li>
+              <li><strong>Notification:</strong> on or before September 29, 2026, AoE.</li>
+              <li><strong>Workshop date:</strong> December 11–12, 2026 (Atlanta).</li>
+            </ul>
+            <p>All deadlines follow the Anywhere on Earth (AoE) timezone.</p>
+          </div>
+        </div>
+
+        <div class="cfp-subsection" id="submission-site">
+          <div class="section-head">
+            <h2>Submission site</h2>
+          </div>
+          <div class="cfp-prose">
+            <p>
+              Submissions are managed via <strong>OpenReview</strong> and remain private during
+              review. All authors should maintain up-to-date OpenReview profiles for
+              conflict-of-interest management and paper matching. Submit your paper at the
+              <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/WMHS" target="_blank" rel="noopener noreferrer">OpenReview submission portal</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="cfp-subsection" id="scope">
+          <div class="section-head">
+            <h2>Scope</h2>
+          </div>
+          <div class="cfp-prose">
+            <p>
+              We welcome contributions across the topics above. Accepted papers are presented
+              as posters, with a subset selected for oral, spotlight, or demonstration talks,
+              and we give a <strong>Best Paper Award</strong> and a
+              <strong>Best Clinical Impact Paper Award</strong> for work with particularly
+              strong potential to improve clinical research, healthcare delivery, or patient
+              outcomes. The workshop is in person at NeurIPS 2026 in Atlanta.
+            </p>
+          </div>
+        </div>
+
+        <div class="cfp-subsection" id="guidelines">
+          <div class="section-head">
+            <h2>Submission guidelines</h2>
+          </div>
+          <div class="cfp-prose">
+            <h3>Formatting</h3>
+            <p>
+              Submissions must be in English and use the
+              <strong>NeurIPS 2026 workshop LaTeX template</strong>. Papers are submitted as a
+              single PDF:
+            </p>
+            <ul>
+              <li><strong>Full Papers:</strong> at most 9 pages of main text.</li>
+              <li><strong>Extended Abstracts:</strong> at most 4 pages of main text.</li>
+              <li>
+                <strong>Demo Track:</strong> working demonstrations of systems and tools for
+                patient modelling, clinical trial simulation, healthcare AI evaluation, or
+                related applications, presented alongside the poster sessions.
+              </li>
+              <li>
+                <strong>Position Papers:</strong> on validation, governance, regulation,
+                evaluation standards, and the responsible clinical use of AI.
+              </li>
+            </ul>
+            <p>
+              References and appendices do not count toward the page limit, but the main text
+              must be self-contained.
+            </p>
+
+            <h3>Responsible-use statement</h3>
+            <p>
+              Every submission also includes a short responsible-use statement covering
+              relevant limitations, uncertainty, potential clinical or societal impacts, and
+              suggested mitigations. It is reviewed with the paper, and a missing statement is
+              grounds for desk rejection.
+            </p>
+
+            <h3>Anonymity</h3>
+            <p>
+              The workshop uses double-blind review. Submissions must be anonymized, with
+              author names, affiliations, and acknowledgments removed and prior work cited in
+              the third person.
+            </p>
+
+            <h3>Non-archival policy</h3>
+            <p>
+              The workshop is non-archival. Papers under review elsewhere are welcome, and
+              accepted papers may be published at other venues afterward. Work already
+              published at NeurIPS or other archival machine-learning venues should not be
+              submitted.
+            </p>
+          </div>
+        </div>
+
+        <div class="cfp-subsection" id="contact">
+          <div class="section-head">
+            <h2>Contact</h2>
+          </div>
+          <div class="cfp-prose">
+            <p>
+              Email <a href="mailto:jay.nanavati@iqvia.com">jay.nanavati@iqvia.com</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="cfp-submit-cta" id="submit">
+          <h3>Submit your paper</h3>
+          <p>Submissions are managed via OpenReview.</p>
+          <div class="cfp-submit-buttons">
+            <a class="btn" href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/WMHS" target="_blank" rel="noopener noreferrer" aria-label="OpenReview submission portal">
+              Open the OpenReview portal
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section speakers" id="speakers">
+        <div class="section-head">
+          <p class="eyebrow">Speakers &amp; Panel</p>
+          <h2>Voices across world models, causality, and clinical AI</h2>
+          <p class="section-lede">
+            The workshop brings together researchers and practitioners working across machine
+            learning, clinical development, and trustworthy healthcare AI, with a
+            cross-disciplinary panel on scientific validity, clinical usefulness, evaluation,
+            and responsible deployment.
+          </p>
+        </div>
+
+        <div class="lineup-group">
+          <h3 class="lineup-subhead">Invited Speakers</h3>
+          <div class="people-grid speakers-grid lineup">
+            <article class="person">
+              <a class="avatar-link" href="https://nathankallus.com/" target="_blank" rel="noopener noreferrer" aria-label="Nathan Kallus personal website">
+                <img class="avatar avatar-photo" src="assets/people/nathan-kallus.png" alt="Nathan Kallus" width="272" height="272" />
+                <span class="avatar-overlay" aria-hidden="true">
+                  <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  </svg>
+                </span>
+              </a>
+              <h3>Nathan Kallus</h3>
+              <p class="role">Assistant Professor of Medical AI</p>
+              <p class="affil">Cornell University</p>
+            </article>
+            <article class="person">
+              <a class="avatar-link" href="https://profiles.ucl.ac.uk/80245-chris-tomlinson" target="_blank" rel="noopener noreferrer" aria-label="Chris Tomlinson UCL profile">
+                <img class="avatar avatar-photo" src="assets/people/chris-tomlinson.png" alt="Chris Tomlinson" width="272" height="272" />
+                <span class="avatar-overlay" aria-hidden="true">
+                  <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  </svg>
+                </span>
+              </a>
+              <h3>Chris Tomlinson</h3>
+              <p class="role">Senior Fellow in Clinical Foundation Models</p>
+              <p class="affil">UCL / NHS Foresight</p>
+            </article>
+            <article class="person person-placeholder" aria-label="More speakers to be confirmed">
+              <div class="avatar avatar-placeholder" aria-hidden="true">
+                <span class="placeholder-plus">+</span>
+              </div>
+              <h3>More</h3>
+              <p class="role">Additional speakers</p>
+              <p class="affil">To be confirmed</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="lineup-group" id="panel">
+          <h3 class="lineup-subhead">Panel Discussion</h3>
+          <div class="people-grid panel-grid lineup">
+            <article class="person">
+              <a class="avatar-link" href="https://uk.linkedin.com/in/raja-shankar-4b80b41" target="_blank" rel="noopener noreferrer" aria-label="Raja Shankar LinkedIn profile">
+                <img class="avatar avatar-photo" src="assets/people/raja-shankar.png" alt="Raja Shankar" width="272" height="272" />
+                <span class="avatar-overlay" aria-hidden="true">
+                  <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  </svg>
+                </span>
+              </a>
+              <p class="badge badge-role">Moderator</p>
+              <h3>Raja Shankar</h3>
+              <p class="role">VP Machine Learning</p>
+              <p class="affil">IQVIA</p>
+            </article>
+            <article class="person">
+              <a class="avatar-link" href="https://roseyu.com/" target="_blank" rel="noopener noreferrer" aria-label="Rose Yu personal website">
+                <img class="avatar avatar-photo" src="assets/people/rose-yu.png" alt="Rose Yu" width="272" height="272" />
+                <span class="avatar-overlay" aria-hidden="true">
+                  <svg class="avatar-overlay-icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  </svg>
+                </span>
+              </a>
+              <p class="badge badge-role">Panelist</p>
+              <h3>Rose Yu</h3>
+              <p class="role">Assistant Professor of Computer Science</p>
+              <p class="affil">UC San Diego</p>
+            </article>
+            <article class="person person-placeholder" aria-label="More panelists to be confirmed">
+              <div class="avatar avatar-placeholder" aria-hidden="true">
+                <span class="placeholder-plus">+</span>
+              </div>
+              <p class="badge badge-role badge-role-placeholder">Panelist</p>
+              <h3>More</h3>
+              <p class="role">Additional panelists</p>
+              <p class="affil">To be confirmed</p>
+            </article>
+          </div>
+        </div>
+
+        <p class="lineup-announcement">
+          Additional speakers and panelists will be announced as the programme is finalised.
+        </p>
       </section>
 
       <section class="section schedule" id="schedule">
@@ -377,586 +563,6 @@
         </div>
       </section>
 
-      <section class="section cfp" id="cfp">
-        <div class="section-head section-head-wide">
-          <h2>Call for Papers</h2>
-          <p class="section-lede">
-            We invite submissions on patient world models, intervention-aware modelling, clinical
-            trial simulation, and the evaluation and deployment of generative models in
-            high-stakes health settings; submissions may address any of the workshop's topic
-            areas and may take the form of methodological research, empirical studies, benchmarks
-            and datasets, working systems, or position and perspective papers.
-          </p>
-        </div>
-
-      <div class="cfp-subsection" id="topics">
-        <div class="section-head">
-          <p class="eyebrow">Topics of Interest</p>
-          <p class="section-lede">
-            We invite original submissions on AI for high-stakes healthcare.
-          </p>
-        </div>
-        <ul class="topic-list">
-          <li>Patient world models using longitudinal, multimodal clinical data</li>
-          <li>Clinical trial simulation, virtual trial arms, synthetic controls, and external control cohorts</li>
-          <li>Counterfactual outcome prediction, treatment effect modelling, and target trial emulation</li>
-          <li>Foundation models for EHR, clinical trials, real-world evidence, and patient timelines</li>
-          <li>Representation of interventions, treatment regimes, endpoints, eligibility criteria, pathways, and mechanisms of action</li>
-          <li>Causal representation learning, causal inference, and off-policy evaluation for intervention-aware simulation</li>
-          <li>Uncertainty quantification, calibration, abstention, ambiguity, and selective prediction</li>
-          <li>Temporal reasoning, logical consistency, clinical plausibility, and protocol-aware reasoning</li>
-          <li>Agentic systems for trial design, protocol interpretation, evidence synthesis, and clinical research workflows</li>
-          <li>Benchmarking, robustness, and validation against real-world evidence, historical trials, clinical knowledge, and downstream clinical utility</li>
-        </ul>
-      </div>
-
-      <div class="cfp-subsection" id="dates">
-        <div class="section-head">
-          <h2>Important dates</h2>
-          <p class="section-lede">All deadlines are Anywhere on Earth (AoE).</p>
-        </div>
-        <ol class="date-rail">
-          <li>
-            <time datetime="2026-09-01">Sep 1, 2026</time>
-            <span>Paper submission deadline</span>
-          </li>
-          <li>
-            <time datetime="2026-09-29">Sep 29, 2026</time>
-            <span>Acceptance notification</span>
-          </li>
-          <li>
-            <time>TBA</time>
-            <span>Camera-ready submission</span>
-          </li>
-          <li>
-            <time>TBA</time>
-            <span>Workshop day</span>
-          </li>
-        </ol>
-      </div>
-
-      <div class="cfp-subsection" id="submissions">
-        <div class="section-head">
-          <p class="eyebrow">Submission Tracks</p>
-          <p class="section-lede">
-            Research, demonstration, and position papers may address any of the three topic
-            areas. We encourage multidisciplinary submissions involving stakeholders from
-            healthcare, public policy, and adjacent fields.
-          </p>
-        </div>
-
-        <div class="cfp-tracks">
-          <article class="cfp-format">
-            <h3>
-              Research Papers
-              <span class="format-limit">(up to 9 pages for full papers or 4 pages for extended abstracts)</span>
-            </h3>
-            <p>
-              Research papers should present methodological, empirical, or analytical
-              contributions relevant to AI for high-stakes healthcare.
-            </p>
-            <p>
-              Full papers should describe complete, self-contained work with clearly stated claims
-              and sufficient evidence to support them. Extended abstracts may present focused
-              contributions, preliminary but substantiated findings, work in progress, negative
-              results, or emerging research directions.
-            </p>
-            <p>Suitable topics include:</p>
-            <ul>
-              <li>Patient world models and longitudinal trajectory modelling;</li>
-              <li>Clinical trial simulation and virtual populations;</li>
-              <li>Intervention-aware, causal, and counterfactual modelling;</li>
-              <li>Treatment-effect estimation and synthetic controls;</li>
-              <li>Foundation models and generative models for health;</li>
-              <li>Benchmarks, datasets, and evaluation frameworks;</li>
-              <li>Calibration, uncertainty, robustness, and generalisation;</li>
-              <li>Safety, reliability, and failure-mode analysis.</li>
-            </ul>
-            <p>
-              Depending on the contribution, supporting evidence may include comparisons with
-              relevant baselines, held-out or external validation, ablation studies, simulation
-              experiments, clinical case studies, or systematic analyses of model behaviour.
-            </p>
-            <p class="review-heading">Reviewers will assess:</p>
-            <ol>
-              <li>Technical soundness and methodological rigor;</li>
-              <li>Quality and appropriateness of the evaluation;</li>
-              <li>Novelty of the methods, findings, datasets, or benchmarks;</li>
-              <li>Relevance to AI for high-stakes healthcare;</li>
-              <li>Potential scientific, clinical, or translational impact;</li>
-              <li>Clarity of presentation.</li>
-            </ol>
-            <p>
-              Full papers are not expected to match the breadth of a NeurIPS main-conference
-              paper, but their central claims must be adequately supported. Extended abstracts
-              will be assessed relative to their shorter format and will not be expected to
-              provide the same breadth of evaluation.
-            </p>
-            <p class="cfp-format-cta">
-              <a class="btn" href="#" aria-label="Submit a research paper on OpenReview">
-                Submit a Research Paper
-              </a>
-            </p>
-          </article>
-
-          <article class="cfp-format">
-            <h3>
-              Demonstration Papers
-              <span class="format-limit">(up to 4 pages)</span>
-            </h3>
-            <p>
-              Demonstration papers should describe a functioning system, prototype, application,
-              or research tool relevant to AI for high-stakes healthcare.
-            </p>
-            <p>
-              The system may be deployed, under evaluation, in pilot use, or at a working
-              prototype stage. Submissions should describe the system architecture, intended
-              users, use context, and the problem it addresses.
-            </p>
-            <p>
-              A comprehensive quantitative evaluation is not required, but authors should provide
-              evidence that the system operates as described. This may include:
-            </p>
-            <ul>
-              <li>Screenshots or example interactions;</li>
-              <li>Example outputs or case studies;</li>
-              <li>A link to an anonymized demonstration video;</li>
-              <li>Preliminary user feedback;</li>
-              <li>Usage data or deployment experience;</li>
-              <li>Technical evaluation of key system components.</li>
-            </ul>
-            <p>
-              Purely conceptual systems, interface mockups, or proposals without a functioning
-              implementation are not suitable for this track.
-            </p>
-            <p>
-              Demonstrations may include clinical decision-support tools, trial-simulation
-              platforms, virtual-patient systems, model-evaluation tools, interactive benchmarks,
-              visualization systems, or deployment and monitoring infrastructure.
-            </p>
-            <p class="review-heading">Reviewers will assess:</p>
-            <ol>
-              <li>Whether the system is functional and sufficiently developed;</li>
-              <li>Relevance and usefulness to healthcare stakeholders;</li>
-              <li>Technical interest and originality of the system design;</li>
-              <li>Evidence that the system works as described;</li>
-              <li>Practical, clinical, or scientific significance;</li>
-              <li>Clarity of the proposed demonstration.</li>
-            </ol>
-            <p>
-              Accepted demonstration papers may be invited to provide a live or recorded
-              demonstration in addition to the poster presentation.
-            </p>
-            <p class="cfp-format-cta">
-              <a class="btn" href="#" aria-label="Submit a demonstration paper on OpenReview">
-                Submit a Demonstration Paper
-              </a>
-            </p>
-          </article>
-
-          <article class="cfp-format">
-            <h3>
-              Position Papers
-              <span class="format-limit">(up to 4 pages)</span>
-            </h3>
-            <p>
-              Position papers should advance a clear and well-supported argument concerning AI for
-              high-stakes healthcare.
-            </p>
-            <p>
-              New experiments are not required, but the central position should be grounded in
-              relevant evidence, such as prior research, regulatory precedent, clinical
-              experience, documented deployments, policy analysis, or established methodological
-              principles.
-            </p>
-            <p>Suitable topics include:</p>
-            <ul>
-              <li>Standards for evaluating patient world models;</li>
-              <li>Validation requirements for clinical trial simulation;</li>
-              <li>Appropriate uses and limitations of virtual populations;</li>
-              <li>Governance and regulation of generative and predictive health models;</li>
-              <li>Clinical adoption and responsible deployment;</li>
-              <li>Safety, accountability, and human oversight;</li>
-              <li>Data access, privacy, and representation;</li>
-              <li>Benchmarking and reproducibility;</li>
-              <li>Scientific priorities and open research questions.</li>
-            </ul>
-            <p>
-              Strong position papers should articulate a specific thesis, explain its
-              significance, and engage seriously with plausible counterarguments, limitations, or
-              alternative perspectives.
-            </p>
-            <p>
-              Purely speculative opinion pieces without substantive evidence or analysis are
-              unlikely to be accepted.
-            </p>
-            <p class="review-heading">Reviewers will assess:</p>
-            <ol>
-              <li>Clarity and significance of the central position;</li>
-              <li>Strength and grounding of the argument;</li>
-              <li>Engagement with counterarguments and limitations;</li>
-              <li>Relevance to AI for high-stakes healthcare;</li>
-              <li>
-                Potential to stimulate productive discussion or influence research and practice;
-              </li>
-              <li>Clarity of presentation.</li>
-            </ol>
-            <p class="cfp-format-cta">
-              <a class="btn" href="#" aria-label="Submit a position paper on OpenReview">
-                Submit a Position Paper
-              </a>
-            </p>
-          </article>
-        </div>
-
-        <div class="cfp-submit-cta" id="submit">
-          <h3>Submit Your Paper</h3>
-          <p>Choose the appropriate OpenReview submission track for your paper.</p>
-          <div class="cfp-submit-buttons">
-            <a class="btn" href="#" aria-label="Submit a research paper on OpenReview">
-              Research Papers
-            </a>
-            <a class="btn" href="#" aria-label="Submit a demonstration paper on OpenReview">
-              Demonstration Papers
-            </a>
-            <a class="btn" href="#" aria-label="Submit a position paper on OpenReview">
-              Position Papers
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="cfp-subsection" id="submission-formats">
-        <div class="section-head">
-          <p class="eyebrow">Submission Formats</p>
-        </div>
-        <div class="cfp-prose">
-          <p>Research papers may be submitted either as:</p>
-          <ul>
-            <li><strong>Full papers:</strong> up to 9 pages; or</li>
-            <li><strong>Extended abstracts:</strong> up to 4 pages.</li>
-          </ul>
-          <p>
-            Demonstration and position papers should be submitted as extended abstracts of up to
-            4 pages.
-          </p>
-          <p>
-            All page limits exclude acknowledgments, references, and appendices. Submissions may
-            be shorter than the maximum page limit and will not be disadvantaged on that basis.
-          </p>
-          <p>
-            All accepted submissions will be presented as posters. A subset will be selected for
-            contributed oral, spotlight, or demonstration presentations.
-          </p>
-        </div>
-      </div>
-
-      <div class="cfp-subsection" id="formatting">
-        <div class="section-head">
-          <p class="eyebrow">Format</p>
-          <h2>Submission format and requirements</h2>
-        </div>
-        <div class="cfp-prose">
-          <p>
-            All submissions must be formatted using the
-            <strong>NeurIPS 2026 LaTeX style file</strong>.
-          </p>
-          <p>For anonymous submissions, authors should use:</p>
-          <pre><code>\usepackage{neurips_2026}</code></pre>
-          <p>
-            without additional options. The
-            <strong>NeurIPS Paper Checklist is not required</strong>.
-          </p>
-          <p>Submissions must comply with the page limit for their selected track:</p>
-          <ul>
-            <li>
-              <strong>Research Papers:</strong> up to 9 pages, or up to 4 pages for extended
-              abstracts.
-            </li>
-            <li><strong>Demonstration Papers:</strong> up to 5 pages.</li>
-            <li><strong>Position Papers:</strong> up to 5 pages.</li>
-          </ul>
-          <p>
-            Extended abstracts are intended for focused contributions, preliminary but
-            substantiated findings, emerging research directions, negative results, working
-            demonstrations, and well-grounded position statements that do not yet warrant a full
-            paper. Extended abstracts are reviewed against the same scientific standards but with
-            an expectation of narrower scope.
-          </p>
-          <p>
-            All page limits exclude acknowledgments, references, and appendices. Figures and
-            tables included in the main paper count toward the page limit.
-          </p>
-          <p>
-            The main submission should be self-contained and contain the evidence necessary to
-            support its central claims. Reviewers are not required to read the appendix or
-            supplementary materials.
-          </p>
-          <p>
-            Submissions that materially violate the formatting, anonymity, or page-limit
-            requirements may be rejected without consideration of their merits.
-          </p>
-          <p>
-            We encourage multidisciplinary submissions involving researchers and practitioners
-            from machine learning, statistics, causal inference, healthcare, clinical development,
-            clinical trial methodology, biomedicine, public policy, regulation, pharmaceutical and
-            biotechnology research, real-world evidence, and adjacent fields.
-          </p>
-          <p>
-            Given the high-stakes nature of healthcare applications, authors are encouraged to
-            discuss relevant limitations, uncertainty, potential failure modes, ethical
-            considerations, data governance, and risks associated with clinical or operational
-            use.
-          </p>
-
-          <h3>Supplementary materials</h3>
-          <p>
-            Authors may include an optional appendix within the submission PDF. The appendix may
-            contain additional experimental results, proofs, derivations, implementation details,
-            figures, tables, or supporting analyses.
-          </p>
-          <p>
-            Additional anonymized supplementary materials, including code, data, videos,
-            interactive demonstrations, or model outputs, may be submitted separately through
-            OpenReview where supported.
-          </p>
-          <p>
-            Supplementary materials must not reveal the authors' identities during the
-            double-blind review process. The main paper must remain understandable and
-            sufficiently supported without requiring reviewers to inspect supplementary material.
-          </p>
-        </div>
-      </div>
-
-      <div class="cfp-subsection" id="review">
-        <div class="section-head">
-          <p class="eyebrow">Review</p>
-          <h2>Review process</h2>
-        </div>
-        <div class="cfp-prose">
-          <h3>Submission platform</h3>
-          <p>
-            All submissions will be managed through <strong>OpenReview</strong>. Use the
-            <a href="#submit">track links above</a> to open the submission portal for your paper.
-          </p>
-          <p>
-            All submitting authors must have an OpenReview account with a complete profile.
-            Account creation and profile verification can take several days, so authors are
-            strongly encouraged to register early.
-          </p>
-
-          <h3>Double-blind review</h3>
-          <p>The workshop will use a double-blind review process.</p>
-          <p>
-            Submissions must be fully anonymized and must not contain author names, affiliations,
-            identifying acknowledgments, or links that reveal the authors' identities.
-          </p>
-          <p>
-            Authors should refer to their own previous work in the third person and should ensure
-            that repositories, project pages, supplementary files, document metadata, and video
-            links do not disclose identifying information.
-          </p>
-          <p>Anonymity violations may result in desk rejection.</p>
-
-          <h3>Reviews and decisions</h3>
-          <p>
-            Each submission will receive <strong>three reviews</strong> from members of the
-            program committee. Reviewers will be matched based on relevant technical,
-            methodological, and domain expertise.
-          </p>
-          <p>
-            There will be no formal author-response or rebuttal stage. Given the short interval
-            between the submission and notification deadlines, decisions will be based on the
-            submitted paper, reviewer assessments, and discussion among the program committee and
-            non-conflicted workshop organizers.
-          </p>
-          <p>
-            Authors should therefore ensure that their submissions are self-contained and clearly
-            explain:
-          </p>
-          <ul>
-            <li>the central research question, system, or position;</li>
-            <li>the evidence supporting the principal claims;</li>
-            <li>relevant assumptions and limitations;</li>
-            <li>
-              the relationship to patient world models, clinical trial simulation, or other
-              high-stakes healthcare settings;
-            </li>
-            <li>
-              and any implications for validation, safety, responsible deployment, or clinical
-              use.
-            </li>
-          </ul>
-
-          <h3>Conflicts of interest</h3>
-          <p>
-            Reviewers and organizers will not participate in the evaluation of submissions for
-            which they have a conflict of interest.
-          </p>
-          <p>
-            Conflicts may include current or recent institutional affiliations, advisor–student
-            relationships, close collaboration, personal relationships, or other circumstances
-            that could reasonably affect impartiality.
-          </p>
-          <p>
-            Submissions involving an organizer or an organizer's institution will be handled
-            exclusively by non-conflicted organizers and reviewers.
-          </p>
-
-          <h3>Confidentiality</h3>
-          <p>
-            Submissions and supplementary materials will be visible only to assigned reviewers,
-            relevant program committee members, and workshop organizers during the review
-            process.
-          </p>
-          <p>
-            Reviewers must treat all submitted materials as confidential and may not use or
-            distribute unpublished ideas, results, code, or data contained in a submission.
-          </p>
-          <p>Rejected submissions will not be made public by the workshop.</p>
-        </div>
-      </div>
-
-      <div class="cfp-subsection" id="publication">
-        <div class="section-head">
-          <p class="eyebrow">Publication Policy</p>
-          <h2>Non-archival status and dual submission</h2>
-        </div>
-        <div class="cfp-prose">
-          <p>
-            <strong>World Models for High-Stakes Health is a non-archival workshop.</strong>
-          </p>
-          <p>
-            Accepted papers will not be included in the official NeurIPS proceedings and will not
-            constitute formal archival publications. Acceptance represents recognition and
-            presentation within the workshop community rather than publication of record.
-          </p>
-          <p>Authors retain copyright to their work.</p>
-
-          <h3>Subsequent submission to other venues</h3>
-          <p>
-            Authors may submit the same work, or an extended version of it, to an archival
-            conference or journal after the workshop.
-          </p>
-          <p>
-            Because the workshop is non-archival, presenting work at World Models for High-Stakes
-            Health does not by itself preclude subsequent submission to venues such as NeurIPS,
-            ICML, ICLR, CHIL, ML4H, or relevant journals.
-          </p>
-          <p>
-            Authors remain responsible for complying with the submission, anonymity,
-            prior-publication, and dual-submission policies of any subsequent venue.
-          </p>
-
-          <h3>Concurrent submissions</h3>
-          <p>
-            Work that is simultaneously under review at another venue may be submitted to the
-            workshop, provided that doing so does not violate the other venue's dual-submission,
-            confidentiality, anonymity, or public-posting policies.
-          </p>
-          <p>
-            Some venues may prohibit concurrent workshop submissions or public posting of papers
-            under review. It is the authors' responsibility to check and comply with the
-            applicable rules.
-          </p>
-
-          <h3>Previously published work</h3>
-          <p>
-            Papers that have already appeared in an archival conference proceeding or journal at
-            the time of submission are not eligible.
-          </p>
-          <p>
-            Non-archival preprints, including papers posted on arXiv or similar repositories, do
-            not count as prior publication and are permitted.
-          </p>
-          <p>
-            Prior non-archival workshop versions may also be submitted, provided that this does
-            not violate the policy of the earlier workshop and that the submission is relevant to
-            the aims of this workshop.
-          </p>
-          <p>
-            Work accepted to or presented as part of the NeurIPS 2026 main conference programme
-            may not also be presented at this workshop.
-          </p>
-
-          <h3>Public availability of accepted papers</h3>
-          <p>
-            Following the camera-ready stage, accepted papers will be made publicly available
-            through OpenReview or the workshop website by default.
-          </p>
-          <p>
-            Authors may choose to opt out of public PDF posting. Instructions and a reminder will
-            be provided before the camera-ready deadline.
-          </p>
-          <p>
-            Making an accepted paper publicly available through OpenReview or the workshop
-            website is a courtesy listing and does not change the non-archival status of the
-            workshop.
-          </p>
-        </div>
-      </div>
-
-      <div class="cfp-subsection" id="authorship">
-        <div class="section-head">
-          <p class="eyebrow">Authorship</p>
-          <h2>Authorship policy</h2>
-        </div>
-        <div class="cfp-prose">
-          <p>The author list entered at the submission deadline must be complete and accurate.</p>
-          <p>
-            No authors may be added after the submission deadline. This applies during review,
-            camera-ready preparation, and any subsequent workshop version of the paper.
-          </p>
-          <p>
-            Author reordering is permitted for accepted papers, provided that all listed authors
-            consent to the change.
-          </p>
-          <p>
-            Removing an author after submission requires written consent from all listed authors,
-            including the author being removed. Requests must be sent to the program chairs with a
-            clear explanation.
-          </p>
-          <p>
-            These rules are necessary to preserve the integrity of conflict-of-interest checks and
-            the double-blind review process.
-          </p>
-        </div>
-      </div>
-
-      <div class="cfp-subsection" id="presentation">
-        <div class="section-head">
-          <p class="eyebrow">Presentation</p>
-          <h2>Presentation and awards</h2>
-        </div>
-        <div class="cfp-prose">
-          <p>
-            All accepted papers will be invited for poster presentation at the workshop.
-          </p>
-          <p>
-            A subset of accepted papers will be selected for contributed oral or spotlight
-            presentations. Selections will be based on the quality of the contribution, relevance
-            to the workshop, and potential value to the workshop discussion.
-          </p>
-          <p>The workshop will present three awards:</p>
-          <ul>
-            <li><strong>Outstanding Research Paper Award.</strong></li>
-            <li><strong>Outstanding Demonstration Paper Award.</strong></li>
-            <li><strong>Outstanding Position Paper Award.</strong></li>
-          </ul>
-          <p>
-            Awards will be made only where the program committee determines that submissions in
-            the relevant track meet an appropriate standard. The organizers may choose not to make
-            an award in a track if there are insufficient eligible submissions.
-          </p>
-          <p>
-            At least one author of each accepted paper must register for and present the work at
-            the workshop. Any exceptions will be considered only in exceptional circumstances and
-            subject to applicable NeurIPS workshop policies.
-          </p>
-        </div>
-      </div>
-
-      </section>
 
       <section class="section organizers" id="organizers">
         <div class="section-head">
@@ -1058,9 +664,8 @@
       <div class="footer-col footer-submissions">
         <h4>Submissions</h4>
         <ul>
-          <li><a href="#">Research Papers</a></li>
-          <li><a href="#">Demonstration Papers</a></li>
-          <li><a href="#">Position Papers</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/WMHS" target="_blank" rel="noopener noreferrer">OpenReview portal</a></li>
         </ul>
       </div>
 
