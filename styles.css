@@ -598,6 +598,7 @@ main {
 
 .cfp > .section-head + .cfp-subsection {
   margin-top: clamp(0.5rem, 2vh, 1rem);
+  padding-top: 0;
 }
 
 .cfp-subsection .section-head {
@@ -612,6 +613,10 @@ main {
   max-width: 42rem;
   margin: 0 auto 2rem;
   text-align: center;
+}
+
+.section-head-wide {
+  max-width: none;
 }
 
 .section-head h2 {

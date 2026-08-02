@@ -171,10 +171,6 @@
         <div class="section-head">
           <p class="eyebrow">Panel Discussion</p>
           <h2>What would make world models trustworthy enough for clinical trial simulation?</h2>
-          <p class="section-lede">
-            A synthesis of technical and translational themes: reliability standards, data access,
-            benchmarks, and responsible use in high-stakes health.
-          </p>
         </div>
         <div class="people-grid panel-grid">
           <article class="person">
@@ -183,12 +179,6 @@
             <p class="role">VP Machine Learning</p>
             <p class="affil">IQVIA</p>
             <p class="badge">Moderator</p>
-          </article>
-          <article class="person">
-            <img class="avatar avatar-photo" src="assets/people/sandeep-burugupalli.png" alt="Sandeep Burugupalli" width="272" height="272" />
-            <h3>Sandeep Burugupalli</h3>
-            <p class="role">Head of Data Science</p>
-            <p class="affil">AstraZeneca</p>
           </article>
           <article class="person">
             <img class="avatar avatar-photo" src="assets/people/rose-yu.png" alt="Rose Yu" width="272" height="272" />
@@ -229,17 +219,23 @@
             <p class="role">Panelist to be confirmed</p>
             <p class="affil">TBC</p>
           </article>
+          <article class="person">
+            <div class="avatar avatar-figure" aria-hidden="true">
+              <svg viewBox="0 0 64 64" focusable="false">
+                <circle cx="32" cy="22" r="12" />
+                <path d="M12 54c2.5-12 10.5-18 20-18s17.5 6 20 18" />
+              </svg>
+            </div>
+            <h3>TBC</h3>
+            <p class="role">Panelist to be confirmed</p>
+            <p class="affil">TBC</p>
+          </article>
         </div>
       </section>
 
       <section class="section schedule" id="schedule">
         <div class="section-head">
-          <p class="eyebrow">Program</p>
-          <h2>Proposed workshop schedule</h2>
-          <p class="section-lede">
-            A full-day program balancing invited talks, contributed orals, posters, structured
-            discussion, and a closing panel.
-          </p>
+          <h2>Program</h2>
         </div>
         <div class="schedule-table" role="table" aria-label="Workshop schedule">
           <div class="sched-row" role="row">
@@ -351,11 +347,14 @@
       </section>
 
       <section class="section cfp" id="cfp">
-        <div class="section-head">
+        <div class="section-head section-head-wide">
           <h2>Call for Papers</h2>
           <p class="section-lede">
-            We invite submissions that advance reliable, intervention-aware patient world models
-            for clinical trial simulation and high-stakes health.
+            We invite submissions on patient world models, intervention-aware modelling, clinical
+            trial simulation, and the evaluation and deployment of generative models in
+            high-stakes health settings. Submissions may address any of the workshop's topic areas
+            and may take the form of methodological research, empirical studies, benchmarks and
+            datasets, working systems, or position and perspective papers.
           </p>
         </div>
 
@@ -377,37 +376,30 @@
         </ul>
       </div>
 
-      <div class="cfp-subsection" id="problems">
+      <div class="cfp-subsection" id="dates">
         <div class="section-head">
-          <p class="eyebrow">Open Problems</p>
-          <h2>What the workshop aims to advance</h2>
+          <p class="eyebrow">Important Dates</p>
+          <h2>Submission timeline</h2>
+          <p class="section-lede">All deadlines are Anywhere on Earth (AoE).</p>
         </div>
-        <div class="problem-grid">
-          <article>
-            <h3>Representation &amp; simulation</h3>
-            <p>
-              Represent patient histories as temporal clinical states; move from observed-care
-              prediction to intervention simulation; incorporate mechanisms of action, biomarkers,
-              and patient heterogeneity.
-            </p>
-          </article>
-          <article>
-            <h3>Uncertainty &amp; reliability</h3>
-            <p>
-              Quantify uncertainty, ambiguity, shift, and abstention when confident errors are
-              dangerous — and define reliability standards for when simulations can inform trial
-              design or evidence generation.
-            </p>
-          </article>
-          <article>
-            <h3>Validation &amp; deployment</h3>
-            <p>
-              Evaluate often-unobserved counterfactuals through historical trial emulation, synthetic
-              controls, negative controls, subgroup calibration, benchmarks, and prospective
-              protocols.
-            </p>
-          </article>
-        </div>
+        <ol class="date-rail">
+          <li>
+            <time datetime="2026-09-01">Sep 1, 2026</time>
+            <span>Paper submission deadline</span>
+          </li>
+          <li>
+            <time datetime="2026-09-29">Sep 29, 2026</time>
+            <span>Acceptance notification</span>
+          </li>
+          <li>
+            <time>TBA</time>
+            <span>Camera-ready submission</span>
+          </li>
+          <li>
+            <time>TBA</time>
+            <span>Workshop day</span>
+          </li>
+        </ol>
       </div>
 
       <div class="cfp-subsection" id="submissions">
@@ -836,53 +828,6 @@
         </div>
       </div>
 
-      <div class="cfp-subsection" id="dates">
-        <div class="section-head">
-          <p class="eyebrow">Important Dates</p>
-          <h2>Submission timeline</h2>
-          <p class="section-lede">All deadlines are Anywhere on Earth (AoE).</p>
-        </div>
-        <ol class="date-rail">
-          <li>
-            <time datetime="2026-09-01">Sep 1, 2026</time>
-            <span>Paper submission deadline</span>
-          </li>
-          <li>
-            <time datetime="2026-09-29">Sep 29, 2026</time>
-            <span>Acceptance notification</span>
-          </li>
-          <li>
-            <time>TBA</time>
-            <span>Camera-ready submission</span>
-          </li>
-          <li>
-            <time>TBA</time>
-            <span>Workshop day</span>
-          </li>
-        </ol>
-      </div>
-
-        <div class="cfp-subsection" id="submit">
-          <div class="section-head">
-            <p class="eyebrow">Submit</p>
-            <h2>Submit your work</h2>
-            <p class="section-lede">
-              We solicit non-archival submissions, including work in progress, benchmarks, negative
-              results, position papers, and emerging directions. Submissions of work already published
-              at major ML venues or presented in the main NeurIPS program are discouraged.
-            </p>
-          </div>
-          <div class="cfp-grid">
-            <div class="cfp-block cfp-cta">
-              <h3>OpenReview</h3>
-              <p>
-                The submission portal will open closer to the deadline. Check back here or follow
-                announcements from the organizers.
-              </p>
-              <a class="btn" href="mailto:jay.nanavati@iqvia.com?subject=WMHS%20NeurIPS%202026%20Inquiry">Contact organizers</a>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section class="section organizers" id="organizers">
