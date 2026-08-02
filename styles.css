@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h, 4.5rem) + 0.5rem);
 }
 
 body {
@@ -179,6 +180,25 @@ em {
   font-size: clamp(0.95rem, 2.2vw, 1.2rem);
   letter-spacing: 0.04em;
   white-space: nowrap;
+}
+
+.hero-neurips {
+  display: inline-block;
+  margin: clamp(1.25rem, 3vh, 1.85rem) auto 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hero-neurips:hover,
+.hero-neurips:focus {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.hero-neurips img {
+  display: block;
+  height: clamp(4rem, 8vw, 6rem);
+  width: auto;
 }
 
 .nav {
@@ -583,6 +603,7 @@ main {
 }
 
 .schedule {
+  padding-top: clamp(1.25rem, 3vh, 2rem);
   padding-bottom: clamp(1.5rem, 3vh, 2.25rem);
 }
 
@@ -802,6 +823,56 @@ main {
   color: var(--teal);
 }
 
+.avatar-link {
+  position: relative;
+  display: inline-block;
+  width: min(17rem, 100%);
+  max-width: 17rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.85rem;
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.avatar-link .avatar,
+.avatar-link .avatar-photo {
+  margin: 0;
+  display: block;
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(10, 24, 48, 0.72), rgba(184, 115, 51, 0.55));
+  color: #ffffff;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.avatar-overlay-icon {
+  width: clamp(2.5rem, 6vw, 3.25rem);
+  height: clamp(2.5rem, 6vw, 3.25rem);
+  color: #ffffff;
+  padding: 0.6rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  backdrop-filter: blur(2px);
+  box-sizing: content-box;
+}
+
+.avatar-link:hover .avatar-overlay,
+.avatar-link:focus-visible .avatar-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .avatar-figure svg {
   width: 48%;
   height: 48%;
@@ -918,6 +989,53 @@ main {
   margin-bottom: clamp(2rem, 4vh, 2.75rem);
 }
 
+.cfp-tracks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: clamp(2rem, 4vh, 2.75rem);
+}
+
+.cfp-submit-cta {
+  margin-top: clamp(2rem, 4vh, 2.75rem);
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201, 133, 63, 0.28), transparent 55%),
+    linear-gradient(135deg, var(--teal-deep), #14283f);
+  color: #f4f7fb;
+  text-align: center;
+}
+
+.cfp-submit-cta h3 {
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+}
+
+.cfp-submit-cta p {
+  color: rgba(244, 247, 251, 0.85);
+  margin: 0 0 1.4rem;
+}
+
+.cfp-submit-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.cfp-submit-buttons .btn {
+  background: #f4f7fb;
+  color: var(--teal-deep);
+  box-shadow: none;
+}
+
+.cfp-submit-buttons .btn:hover {
+  background: #ffffff;
+  color: var(--teal-deep);
+}
+
 .cfp-format {
   padding: 1.75rem;
   border: 1px solid rgba(12, 25, 41, 0.1);
@@ -930,23 +1048,28 @@ main {
 .cfp-format h3 {
   font-size: 1.5rem;
   color: var(--ink);
-  margin: 0 0 0.35rem;
+  line-height: 1.3;
+  margin: 0 0 0.9rem;
 }
 
 .cfp-format .format-limit {
+  display: inline;
   font-family: var(--font-display);
   font-style: italic;
+  font-weight: 400;
+  font-size: 0.85em;
   color: var(--muted);
-  margin: 0 0 1rem;
+  margin-left: 0.35em;
 }
 
 .cfp-format p {
   margin: 0 0 0.9rem;
 }
 
-.cfp-format ul {
+.cfp-format ul,
+.cfp-format ol {
   margin: 0 0 1rem;
-  padding-left: 1.15rem;
+  padding-left: 1.35rem;
 }
 
 .cfp-format li + li {
@@ -957,6 +1080,10 @@ main {
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 0.45rem;
+}
+
+.cfp-format-cta {
+  margin: 1.25rem 0 0;
 }
 
 .cfp-categories {
@@ -1013,8 +1140,8 @@ main {
 }
 
 .cfp-prose {
-  max-width: 46rem;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   color: var(--ink-soft);
   text-align: left;
 }
@@ -1140,40 +1267,120 @@ main {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto 2.5rem;
-  padding: 2rem var(--page-pad) 1rem;
+  padding: 2.5rem var(--page-pad) 1.5rem;
   border-top: 1px solid var(--line);
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   box-sizing: border-box;
 }
 
 .footer-brand {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.75rem;
 }
 
-.footer-brand strong {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  letter-spacing: 0.06em;
+.footer-neurips {
+  display: inline-block;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.footer-neurips:hover,
+.footer-neurips:focus {
+  opacity: 1;
+}
+
+.footer-neurips img {
   display: block;
+  height: clamp(4.5rem, 8vw, 6.5rem);
+  width: auto;
 }
 
-.footer-brand p {
+.footer-tagline {
   margin: 0;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
 }
 
-.footer-meta {
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 0.85rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
+  display: grid;
+  gap: 0.55rem;
 }
 
-.footer-meta a {
-  color: var(--teal);
+.footer-col li {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.footer-col a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover,
+.footer-col a:focus {
+  color: var(--teal-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--gold-soft);
+}
+
+.footer-date {
+  min-width: 5.5rem;
+  color: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 720px) {
+  .site-footer {
+    grid-template-columns: minmax(12rem, 1.4fr) repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "brand submissions contact"
+      "dates dates dates";
+    align-items: start;
+    gap: 2rem 2.5rem;
+  }
+
+  .footer-brand { grid-area: brand; }
+  .footer-submissions { grid-area: submissions; }
+  .footer-contact { grid-area: contact; }
+  .footer-dates { grid-area: dates; }
+
+  .footer-dates ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem 1.5rem;
+  }
+
+  .footer-dates li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .footer-dates .footer-date {
+    min-width: 0;
+  }
 }
 
 @media (min-width: 720px) {
