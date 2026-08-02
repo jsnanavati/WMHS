@@ -1007,6 +1007,57 @@ main {
   margin: 0.75rem 0 0;
 }
 
+.cfp-prose {
+  max-width: 46rem;
+  margin: 0 auto;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+.cfp-prose p {
+  margin: 0 0 0.95rem;
+  line-height: 1.65;
+}
+
+.cfp-prose h3 {
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin: 1.75rem 0 0.6rem;
+}
+
+.cfp-prose h3:first-child {
+  margin-top: 0;
+}
+
+.cfp-prose ul {
+  margin: 0 0 1.1rem;
+  padding-left: 1.2rem;
+}
+
+.cfp-prose li {
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+}
+
+.cfp-prose strong {
+  color: var(--ink);
+}
+
+.cfp-prose pre {
+  margin: 0.3rem 0 1.1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(12, 25, 41, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.cfp-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  color: var(--teal-deep);
+}
+
 .cfp-grid {
   display: grid;
   gap: 1.25rem;
