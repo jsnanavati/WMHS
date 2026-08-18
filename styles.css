@@ -820,6 +820,13 @@ main {
   color: var(--muted);
 }
 
+/* Center a lone +More card when it wraps to its own row */
+.speakers-grid.lineup > .person-placeholder:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(17rem, 100%);
+}
+
 .person-placeholder h3,
 .person-placeholder .role,
 .person-placeholder .affil {
