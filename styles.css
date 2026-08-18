@@ -821,7 +821,8 @@ main {
 }
 
 /* Center a lone +More card when it wraps to its own row */
-.speakers-grid.lineup > .person-placeholder:last-child {
+.speakers-grid.lineup > .person-placeholder:last-child,
+.panel-grid.lineup > .person-placeholder:last-child {
   grid-column: 1 / -1;
   justify-self: center;
   width: min(17rem, 100%);
@@ -1049,6 +1050,10 @@ main {
   background: rgba(90, 143, 175, 0.14);
   border: 1px solid rgba(90, 143, 175, 0.35);
   border-radius: 999px;
+}
+
+.panel .person .badge-role {
+  margin: 0.55rem auto 0;
 }
 
 .panel .person {
