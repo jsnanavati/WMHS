@@ -149,28 +149,30 @@ em {
 }
 
 .deadline-banner {
-  background: linear-gradient(90deg, #0a1830 0%, #1a3a52 55%, #2a4a3a 100%);
-  color: #f3f6f9;
+  background: #f7e9b8;
+  color: var(--ink);
   text-align: center;
-  padding: 0.55rem var(--page-pad);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem var(--page-pad);
+  border-bottom: 1px solid rgba(184, 115, 51, 0.22);
 }
 
 .deadline-banner p {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 52rem;
   font-size: clamp(0.78rem, 1.8vw, 0.9rem);
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.01em;
+  text-align: center;
 }
 
 .deadline-banner strong {
   font-weight: 650;
-  color: #f0d3a8;
+  color: var(--ink);
 }
 
 .deadline-banner a {
-  color: #d7e8f4;
+  color: var(--teal-deep);
   text-decoration: underline;
   text-underline-offset: 0.15em;
   margin-left: 0.35em;
@@ -178,7 +180,7 @@ em {
 }
 
 .deadline-banner a:hover {
-  color: #ffffff;
+  color: var(--teal);
 }
 
 .site-header {
@@ -1369,6 +1371,12 @@ main {
   color: var(--ink);
   min-width: 12rem;
   display: inline-block;
+}
+
+.cfp-key-dates s {
+  color: var(--muted);
+  text-decoration-thickness: 1.5px;
+  margin-right: 0.35em;
 }
 
 .cfp-grid {
