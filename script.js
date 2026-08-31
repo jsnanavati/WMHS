@@ -17,12 +17,14 @@
     });
   }
 
+  const chrome = document.querySelector(".site-chrome");
   const header = document.querySelector(".site-header");
   const setHeaderHeight = () => {
-    if (!header) return;
+    const el = chrome || header;
+    if (!el) return;
     document.documentElement.style.setProperty(
       "--header-h",
-      `${header.offsetHeight}px`
+      `${el.offsetHeight}px`
     );
   };
   setHeaderHeight();

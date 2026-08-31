@@ -142,10 +142,49 @@ em {
   }
 }
 
-.site-header {
+.site-chrome {
   position: sticky;
   top: 0;
   z-index: 40;
+}
+
+.deadline-banner {
+  background: linear-gradient(90deg, #0a1830 0%, #1a3a52 55%, #2a4a3a 100%);
+  color: #f3f6f9;
+  text-align: center;
+  padding: 0.55rem var(--page-pad);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.deadline-banner p {
+  margin: 0;
+  font-size: clamp(0.78rem, 1.8vw, 0.9rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.deadline-banner strong {
+  font-weight: 650;
+  color: #f0d3a8;
+}
+
+.deadline-banner a {
+  color: #d7e8f4;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  margin-left: 0.35em;
+  white-space: nowrap;
+}
+
+.deadline-banner a:hover {
+  color: #ffffff;
+}
+
+.site-header {
+  position: relative;
+  top: auto;
+  z-index: auto;
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -256,7 +295,7 @@ em {
 
 .mobile-nav {
   position: sticky;
-  top: 3.7rem;
+  top: var(--header-h, 4.5rem);
   z-index: 35;
   display: grid;
   gap: 0.35rem;
